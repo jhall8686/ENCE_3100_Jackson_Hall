@@ -1,4 +1,4 @@
-<img width="268" height="127" alt="image" src="https://github.com/user-attachments/assets/ad2bd191-57df-4642-87f0-60ccc7c4a46f" /># Lab 1
+# Lab 1
 
 ## Part 1
 #### Initialize switches and connect them to LEDs
