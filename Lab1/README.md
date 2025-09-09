@@ -1,1 +1,5 @@
-# Write Lab 1 here
+# Lab 1
+
+## Part 1
+
+
