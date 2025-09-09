@@ -16,5 +16,10 @@ To design an n-bit multiplexer, first a submodule must be designed that function
 
 <img src="img/code_sc2.png" width = 300/>
 
-This submodule can then be used to create larger multiplexers:
+This submodule can then be used to create larger multiplexers in the following configuration:
 
+<img src="img/sch_sc1.png" width = 200/> 
+
+In Verilog:
+
+<img src="img/code_sc3.png" width = 300/>
