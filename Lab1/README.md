@@ -23,3 +23,5 @@ This submodule can then be used to create larger multiplexers in the following c
 In Verilog:
 
 <img src="img/code_sc3.png" width = 300/>
+
+This functions as a 4-bit 2-to-1 multiplexer as expected-- when uploaded to the DE10, two 4-bit numbers are represented on the switches, and which 4-bit number gets displayed on the four LEDs depends on the select bit.
