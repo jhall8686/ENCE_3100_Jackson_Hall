@@ -32,5 +32,10 @@ This functions as a 4-bit 2-to-1 multiplexer as expected-- when uploaded to the 
 
 Similar to in Part 2, a multi-bit multiplexer needs to be constructed from a 1-bit submodule with the same functionality:
 
-<img src="img/code_sc5.png" width = 300/>
+<img src="img/code_sc5.png" height = 300/> <img src="img/sch_sc2.png" height = 300/> 
+
+A 3-bit version can be created in the same way as the 8-bit in Part 2:
+
+<img src="img/code_sc6.png" height = 300/>
+
 
