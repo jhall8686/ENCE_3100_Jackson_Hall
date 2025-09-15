@@ -45,7 +45,7 @@ This cannot be connected to the top module because of the capabilities of the DE
 This uses switches 9-7 as select bits and 6-2 as the data bits. LED0 displays the selected of the 5 bits.
 
 ## Part 4
-#### Seven-segment display decoder module
+#### Create a seven-segment display decoder module
 
 
 
