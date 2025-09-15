@@ -25,3 +25,11 @@ In Verilog:
 <img src="img/code_sc3.png" width = 300/>
 
 This functions as a 4-bit 2-to-1 multiplexer as expected-- when uploaded to the DE10, two 4-bit numbers are represented on the switches, and which 4-bit number gets displayed on the four LEDs depends on the select bit.
+
+## Part 3
+#### Create a 3-bit 5-to-1 multiplexer
+- *Again, this won't be possible to synthesize on the boards we have, so the 1-bit 5-to-1 multiplexer is tested instead*
+
+Similar to in Part 2, a multi-bit multiplexer needs to be constructed from a 1-bit submodule with the same functionality:
+
+
