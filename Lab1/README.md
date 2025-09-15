@@ -36,11 +36,16 @@ Similar to in Part 2, a multi-bit multiplexer needs to be constructed from a 1-b
 
 A 3-bit version can be created in the same way as the 8-bit in Part 2:
 
-<img src="img/code_sc6.png" height = 200/>
+<img src="img/code_sc6.png" height = 250/>
 
 This cannot be connected to the top module because of the capabilities of the DE10, so testing the 1-bit instead:
 
-<img src="img/code_sc7.png" height = 300/>
+<img src="img/code_sc7.png" height = 200/>
+
+This uses switches 9-7 as select bits and 6-2 as the data bits. LED0 displays the selected of the 5 bits.
+
+## Part 4
+#### Seven-segment display decoder module
 
 
 
