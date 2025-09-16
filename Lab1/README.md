@@ -108,9 +108,9 @@ To implement this, five instances of the following circuit diagram are needed-- 
 
 Using the 3-bit 5-to-1 multiplexer from Part 3 and the seven-segment decoder from Part 4, this configuration is simple to implement in Verilog:
 
-<img src="img/code_sc10.png" height = 300/>
+<img src="img/code_sc10.png" height = 400/>
 
-In this configuration, SW2-SW0 function as the three select bits for each multiplexer, and each multiplexer has the same list of characters shifted one to the left. All of the binary codes (`0'b010`) correspond to letters.
+In this configuration, SW2-SW0 function as the three select bits for each multiplexer, and each multiplexer has the same list of characters shifted one to the left. All of the binary codes (`3'b010`) correspond to letters.
 
 
 
