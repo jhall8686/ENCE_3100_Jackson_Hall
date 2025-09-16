@@ -47,5 +47,29 @@ This uses switches 9-7 as select bits and 6-2 as the data bits. LED0 displays th
 ## Part 4
 #### Create a seven-segment display decoder module
 
+This task is more complicated than the previous ones, so some work was done beforehand to flesh out the truth table for the decoder:
 
+<img src="img/sch_sc4.png" height = 200/>
 
+| s2 | s1 | s0 | m0 | m1 | m2 | m3 | m4 | m5 | m6 | m7 |
+|----|----|----|----|----|----|----|----|----|----|----|
+| 0  | 0  | 0  | 1  | 0  | 0  | 1  | 0  | 0  | 0  | 1  |
+| 0  | 0  | 1  | 0  | 1  | 1  | 0  | 0  | 0  | 0  | 1  |
+| 0  | 1  | 0  | 1  | 1  | 1  | 0  | 0  | 0  | 1  | 1  |
+| 0  | 1  | 1  | 0  | 0  | 0  | 0  | 0  | 0  | 0  | 1  |
+| 1  | 0  | 0  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  |
+| 1  | 0  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  |
+| 1  | 1  | 0  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  |
+| 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  |
+
+Using lookup tables, this can be translated into 7 logic circuits, which I then designed in Logisim:
+
+<img src="img/sch_sc3.png" height = 200/>
+
+ Translated into a Verilog submodule:
+
+ <img src="img/code_sc8.png" height = 200/>
+
+ And connected to three switches and the eight pins of the seven-segment display:
+
+ <img src="img/code_sc9.png" height = 200/>
