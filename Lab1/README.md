@@ -1,6 +1,13 @@
 # Lab 1
 
 # Table of Contents
+- [Part 1 – Initialize switches and connect them to LEDs](#part-1)
+- [Part 2 – Create an 8-bit 2-to-1 multiplexer](#part-2)
+- [Part 3 – Create a 3-bit 5-to-1 multiplexer](#part-3)
+- [Part 4 – Create a seven-segment display decoder module](#part-4)
+- [Part 5 – Create a rotating 5-letter word with the 7 segment displays](#part-5)
+
+---
 
 ## Part 1
 #### Initialize switches and connect them to LEDs
