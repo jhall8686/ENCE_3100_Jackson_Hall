@@ -92,4 +92,5 @@ The following table shows the arrangement of letters based on the three select b
 
  To implement this, five instances of the following circuit diagram are needed-- notably without switches being attached to the multiplexer. The inputs will be hard-coded for each multiplexer.
 
- 
+  <img src="img/sch_sc5.png" height = 300/>
+
