@@ -63,7 +63,7 @@ This task is more complicated than the previous ones, so some work was done befo
 | 1  | 1  | 0  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  |           |
 | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  |           |
 
-**Table 1-- Truth table for character decoder**
+**Table 1- Truth Table for Character Decoder**
 
 ----------------------------
 Using lookup tables, this can be translated into 7 logic circuits, which I then designed in Logisim:
@@ -89,3 +89,7 @@ When this is uploaded to the FPGA board, the character decoder works- switches 2
 The following table shows the arrangement of letters based on the three select bits, which are going to be SW[9:7] instead of SW[17:15].
 
  <img src="img/table_sc1.png" height = 200/>
+
+ To implement this, five instances of the following circuit diagram are needed-- notably without switches being attached to the multiplexer. The inputs will be hard-coded for each multiplexer.
+
+ 
