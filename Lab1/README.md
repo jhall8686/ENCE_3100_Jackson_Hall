@@ -89,7 +89,7 @@ Using lookup tables, this can be translated into 7 logic circuits, which I then 
 
 When this is uploaded to the FPGA board, the character decoder works- switches 2-0 work as s[2:0] and display the correct letter on the HEX0 display.
 
-# Part 5
+## Part 5
 
 #### Create a rotating 5-letter word with the 7 segment displays
 
