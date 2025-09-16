@@ -1,6 +1,6 @@
 # Lab 1
 
-# Table of Contents
+## Table of Contents
 - [Part 1 – Initialize switches and connect them to LEDs](#part-1)
 - [Part 2 – Create an 8-bit 2-to-1 multiplexer](#part-2)
 - [Part 3 – Create a 3-bit 5-to-1 multiplexer](#part-3)
