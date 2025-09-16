@@ -51,16 +51,16 @@ This task is more complicated than the previous ones, so some work was done befo
 
 <img src="img/sch_sc4.png" height = 500/>
 
-| s2 | s1 | s0 | m0 | m1 | m2 | m3 | m4 | m5 | m6 | m7 |
-|----|----|----|----|----|----|----|----|----|----|----|
-| 0  | 0  | 0  | 1  | 0  | 0  | 1  | 0  | 0  | 0  | 1  |
-| 0  | 0  | 1  | 0  | 1  | 1  | 0  | 0  | 0  | 0  | 1  |
-| 0  | 1  | 0  | 1  | 1  | 1  | 0  | 0  | 0  | 1  | 1  |
-| 0  | 1  | 1  | 0  | 0  | 0  | 0  | 0  | 0  | 0  | 1  |
-| 1  | 0  | 0  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  |
-| 1  | 0  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  |
-| 1  | 1  | 0  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  |
-| 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  |
+| s2 | s1 | s0 | m0 | m1 | m2 | m3 | m4 | m5 | m6 | m7 | Character |
+|----|----|----|----|----|----|----|----|----|----|----|-----------|
+| 0  | 0  | 0  | 1  | 0  | 0  | 1  | 0  | 0  | 0  | 1  | H         |
+| 0  | 0  | 1  | 0  | 1  | 1  | 0  | 0  | 0  | 0  | 1  | E         |
+| 0  | 1  | 0  | 1  | 1  | 1  | 0  | 0  | 0  | 1  | 1  | L         |
+| 0  | 1  | 1  | 0  | 0  | 0  | 0  | 0  | 0  | 0  | 1  | O         |
+| 1  | 0  | 0  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  |           |
+| 1  | 0  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  |           |
+| 1  | 1  | 0  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  |           |
+| 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  |           |
 
 Using lookup tables, this can be translated into 7 logic circuits, which I then designed in Logisim:
 
@@ -73,3 +73,6 @@ Using lookup tables, this can be translated into 7 logic circuits, which I then 
  And connected to three switches and the eight pins of the seven-segment display:
 
  <img src="img/code_sc9.png" height = 200/>
+
+When this is uploaded to the FPGA board, the character decoder works- switches 2-0 work as s[2:0] and display the correct letter on the HEX0 display.
+
