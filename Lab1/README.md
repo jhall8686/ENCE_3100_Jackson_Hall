@@ -51,6 +51,7 @@ This task is more complicated than the previous ones, so some work was done befo
 
 <img src="img/sch_sc4.png" height = 500/>
 
+
 | s2 | s1 | s0 | m0 | m1 | m2 | m3 | m4 | m5 | m6 | m7 | Character |
 |----|----|----|----|----|----|----|----|----|----|----|-----------|
 | 0  | 0  | 0  | 1  | 0  | 0  | 1  | 0  | 0  | 0  | 1  | H         |
@@ -62,6 +63,9 @@ This task is more complicated than the previous ones, so some work was done befo
 | 1  | 1  | 0  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  |           |
 | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  |           |
 
+**Table 1-- Truth table for character decoder**
+
+----------------------------
 Using lookup tables, this can be translated into 7 logic circuits, which I then designed in Logisim:
 
 <img src="img/sch_sc3.png" height = 400/>
@@ -76,3 +80,12 @@ Using lookup tables, this can be translated into 7 logic circuits, which I then 
 
 When this is uploaded to the FPGA board, the character decoder works- switches 2-0 work as s[2:0] and display the correct letter on the HEX0 display.
 
+# Part 5
+
+#### Create a rotating 5-letter word with the 7 segment displays
+
+- *One modification was made to the original intentions because of the lack of switches on the given FPGA board-- the letters are preset*
+
+The following table shows the arrangement of letters based on the three select bits, which are going to be SW[9:7] instead of SW[17:15].
+
+ <img src="img/table_sc1.png" height = 200/>
