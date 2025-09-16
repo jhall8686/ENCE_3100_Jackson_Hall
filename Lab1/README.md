@@ -2,16 +2,6 @@
 
 # Table of Contents
 
-[Part 1: Initialization](#part-1-initialize-switches-and-connect-them-to-leds)
-
-[Part 2: 8-Bit 2-to-1 Multiplexer](#part-2-create-an-8-bit-2-to-1-multiplexer)
-
-[Part 3: 3-Bit 5-to-1 Multiplexer](#part-3-create-a-3-bit-5-to-1-multiplexer)
-
-[Part 4: Seven Segment Display Decoder](#part-4-create-a-seven-segment-display-decoder-module)
-
-[Part 5: Five Letter Word Display With Select Bits](#part-5-create-a-rotating-5-letter-word-with-the-7-segment-displays)
-
 ## Part 1
 #### Initialize switches and connect them to LEDs
 The switches and LEDs are initialized in the top module, then connected with an `assign` statement.
