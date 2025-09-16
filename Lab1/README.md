@@ -1,5 +1,17 @@
 # Lab 1
 
+# Table of Contents
+
+[Part 1: Initialization](#part-1-initialize-switches-and-connect-them-to-leds)
+
+[Part 2: 8-Bit 2-to-1 Multiplexer](#part-2-create-an-8-bit-2-to-1-multiplexer)
+
+[Part 3: 3-Bit 5-to-1 Multiplexer](#part-3-create-a-3-bit-5-to-1-multiplexer)
+
+[Part 4: Seven Segment Display Decoder](#part-4-create-a-seven-segment-display-decoder-module)
+
+[Part 5: Five Letter Word Display With Select Bits](#part-5-create-a-rotating-5-letter-word-with-the-7-segment-displays)
+
 ## Part 1
 #### Initialize switches and connect them to LEDs
 The switches and LEDs are initialized in the top module, then connected with an `assign` statement.
@@ -86,11 +98,20 @@ When this is uploaded to the FPGA board, the character decoder works- switches 2
 
 - *One modification was made to the original intentions because of the lack of switches on the given FPGA board-- the letters are preset*
 
-The following table shows the arrangement of letters based on the three select bits, which are going to be SW[9:7] instead of SW[17:15].
+The following table shows the arrangement of letters based on the three select bits, which are going to be SW[2:0] instead of SW[17:15].
 
- <img src="img/table_sc1.png" height = 200/>
+<img src="img/table_sc1.png" height = 200/>
 
- To implement this, five instances of the following circuit diagram are needed-- notably without switches being attached to the multiplexer. The inputs will be hard-coded for each multiplexer.
+To implement this, five instances of the following circuit diagram are needed-- notably without switches being attached to the multiplexer. The inputs will be hard-coded for each multiplexer.
 
-  <img src="img/sch_sc5.png" height = 300/>
+ <img src="img/sch_sc5.png" height = 300/>
 
+Using the 3-bit 5-to-1 multiplexer from Part 3 and the seven-segment decoder from Part 4, this configuration is simple to implement in Verilog:
+
+<img src="img/code_sc10.png" height = 200/>
+
+In this configuration, SW2-SW0 function as the three select bits for each multiplexer, and each multiplexer has the same list of characters shifted one to the left. All of the binary codes (`0'b010`) correspond to letters.
+
+
+
+  
