@@ -12,3 +12,5 @@ While the DE-10 Board cannot have four BCD inputs because there are only 10 swit
 This truth table results in the following circuit (generated from the truth table in Logisim):
 <img src="img/sch_sc1.png" height = 600/>
 
+The window on the right contains the expressions required for the Verilog code, so the BCD to Seven-Segment Display Decoder Module is simply seven assign statements with those logical statements:
+
