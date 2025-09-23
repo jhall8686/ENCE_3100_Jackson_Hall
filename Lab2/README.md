@@ -14,3 +14,4 @@ This truth table results in the following circuit (generated from the truth tabl
 
 The window on the right contains the expressions required for the Verilog code, so the BCD to Seven-Segment Display Decoder Module is simply seven assign statements with those logical statements:
 
+<img src="img/code_sc1.png" height = 300/>
