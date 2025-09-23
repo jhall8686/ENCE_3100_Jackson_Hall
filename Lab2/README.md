@@ -122,9 +122,61 @@ Circuit A must now convert the second digit of 10-19 instead of 10-15, which req
 
 In Verilog:
 
+<img src="img/code_sc9.png" height = 300/>
 
+And the full submodule `bin_to_dec`:
 
+<img src="img/code_sc11.png" height = 400/>
 
+##### CheckBCD
+
+This circuit is as simple as two of the previously designed comparators OR'ed together:
+
+<img src="img/sch_sc8.png" height = 600/>
+
+In Verilog:
+
+<img src="img/code_sc12.png" height = 300/>
+
+Combining these together in the top module:
+
+<img src="img/code_sc10.png" height = 300/>
+
+The DE10 board after uploading the code:
+
+<img src="img/board_rec4.gif" height = 200/>
+
+## Part 5
+
+#### Adding Two 2-Digit BCD Numbers
+
+*Since the DE10 only has 10 switches, the second 2-bit number needs to be hard-coded. 99 was chosen in order to prove the maximum case (99 + 99 + 1).*
+
+A slightly modified version of the circuit in Part 4, one that doesn't include the BCD to 7-Segment Decoder, is used in this part. In Logisim, its name is sum_to_2digit. In Verilog, its name is bin_to_dec_v3. 
+
+<img src="img/sch_sc9.png" height = 600/>
+
+As can be seen above, the three-digit adder simply does the 4-bit adder -> BCD conversion -> 7-segment pipeline twice, then uses the same Circuit B logic for the 100's place 7-segment display. The modified sum_to_2digit can also be seen below, simply outputting the multiplexer outputs alongside z:
+
+<img src="img/sch_sc10.png" height = 600/>
+
+Implementing this in Verilog required creating that bin_to_dec_v3 submodule to match sum_to_2digit, which can be seen below:
+
+<img src="img/code_sc13.png" height = 600/>
+
+And, of course, the submodule that encapsulates the 2-digit BCD number adder:
+
+<img src="img/code_sc14.png" height = 500/>
+
+Implementing this in the top module:
+
+<img src="img/code_sc15.png" height = 150/>
+
+And published to the DE10 Board:
+
+<img src="img/board_rec5.gif" height = 200/>
+
+The above gif shows how SW[8:0] are added to the 99 already stored on b[7:0], to a maximum of 199.
 
 
 
