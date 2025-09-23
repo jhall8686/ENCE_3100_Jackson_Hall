@@ -22,6 +22,12 @@ Implementing in the top module:
 
 The DE10 after uploading the code:
 
+<img src="img/board_rec1.gif" height = 200/>
 
+## Part 2
+
+#### Binary to Decimal Converter
+
+This circuit is intended to take a 4-bit number and display it correctly in decimal on two seven-segment displays. 
 
 
