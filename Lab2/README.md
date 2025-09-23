@@ -18,6 +18,6 @@ The window on the right contains the expressions required for the Verilog code, 
 
 Implementing in the top module:
 
-<img src="img/code_sc2.png" height = 300/>
+<img src="img/code_sc2.png" height = 150/>
 
 
