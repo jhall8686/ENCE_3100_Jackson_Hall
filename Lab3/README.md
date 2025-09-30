@@ -123,5 +123,14 @@ THe capabilities of the DE10 prevent the 16-bit approach, but the same idea can 
 
 This will simply require 8 bits of storage, which can be achieved in an always block, including the active-low asynchronous reset and positive-edge triggering clock.
 
+Two submodules are created: one for the memory portion of the circuit, and one to convert an 8-bit binary input (2 digit hex) to 7 segment.
 
+<img width="532" height="294" alt="image" src="https://github.com/user-attachments/assets/6412c31d-4dc7-4349-84f1-29846136f9ae" />
 
+<img width="543" height="697" alt="image" src="https://github.com/user-attachments/assets/716893ac-da3c-4450-8e00-9fad19e960c0" />
+
+To use them in the top module, the following is done:
+
+<img width="725" height="128" alt="image" src="https://github.com/user-attachments/assets/56da9bbc-a4d6-49c8-9b53-abc03d535150" />
+
+This automatically passes the 8 switch inputs to the HEX3 and HEX2, and when the clock triggers, it stores the data on the register and passes that info to HEX1 and HEX0. It works as expected when uploaded to the DE10.
