@@ -91,4 +91,37 @@ When uploaded to the DE10, the latch outputs its next value on a positive edge t
 
 This part requires the design of D logic circuits-- the D latch, the positive edge-triggered D-flip-flop, and the negative edge-triggered D-flip-flop. All of these can be designed in always blocks:
 
+<img width="264" height="245" alt="image" src="https://github.com/user-attachments/assets/084783ec-a932-471f-a57d-3db315502e51" />
+<img width="364" height="293" alt="image" src="https://github.com/user-attachments/assets/56f76075-e85e-40c3-a65a-ee71c95bd450" />
+<img width="347" height="312" alt="image" src="https://github.com/user-attachments/assets/26707f7e-d962-4780-ad0f-bc5278c2ae7b" />
+
+Clearly this is much simpler than the combinational logic with the assign statements, and is much preferrable. When this is synthesized and viewed in the RTL Viewer:
+
+<img width="1354" height="931" alt="image" src="https://github.com/user-attachments/assets/8574b224-1503-4f92-91e9-f97e03ec713d" />
+
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/f1a1fb13-766c-4bf0-ad9f-e10594d6fd1f" />
+<img width="400"  alt="image" src="https://github.com/user-attachments/assets/29034dc3-dc34-4705-a574-a9d7803c4b55" />
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/bb256360-126d-4c7d-a50a-d2c1d50cd31b" />
+
+Because they sit in an always block and don't contain the `/* synthesis keep */` anymore, the system simply implements it with one lookup table and abstracts it as the actual latch/flip-flop.
+
+When uploaded to the DE10, they each function according to each of their truth tables:
+
+| D | Clk | D Latch Q | Pos-Edge DFF Q | Neg-Edge DFF Q |
+|---|---------|-----------|----------------|----------------|
+| – | 0       | latch     | latch          | latch          |
+| 0 | 1       | 0         | latch          | latch          |
+| 1 | 1       | 1         | latch          | latch          |
+| 0 | ↑       | –         | 0              | latch          |
+| 1 | ↑       | –         | 1              | latch          |
+| 0 | ↓       | –         | latch          | 0              |
+| 1 | ↓       | –         | latch          | 1              |
+
+### Part 5- Storing Hex Numbers
+
+THe capabilities of the DE10 prevent the 16-bit approach, but the same idea can be examined with 8-bit (2 digit hex) numbers.
+
+This will simply require 8 bits of storage, which can be achieved in an always block, including the active-low asynchronous reset and positive-edge triggering clock.
+
+
 
