@@ -62,11 +62,18 @@ And synthesized on the DE10:
 
 ## Part 4 - Multiplication with Ripple Carry Adders
 
-This part will forego the full adders in favor of an equivalent circuit, the ripple carry adder, the size of which can also be parametrized. The n-bit adder used for this part is below:
+This part will forego the full adders in favor of an equivalent circuit, the ripple carry adder, the size of which can also be parametrized. It will also use memory elements to synchronize multiplication results with the clock:
+
+<img width="604" height="386" alt="image" src="https://github.com/user-attachments/assets/27dfe4c5-7221-4c7e-9a29-f478dd1aab70" />
+_**The multiplier will be 8-bit rather than 5-bit and will have a 16-bit output**_
 
 <img width="552" height="314" alt="image" src="https://github.com/user-attachments/assets/bf5c33e0-4005-4035-aa25-e8801072595c" />
 
-Implementing this for a multiplier is very similar to [Part 3](#part-3---4-bit-multiplication-with-full-adders). The same sum and carry logic applies, but without the arrays of carry wires being needed. And since the adder can be parametrized, this one can be an 8-bit multiplier instead:
+Implementing this for a multiplier is very similar to [Part 3](#part-3---4-bit-multiplication-with-full-adders):
+
+<img width="984" height="829" alt="image" src="https://github.com/user-attachments/assets/4ad40a98-3e4f-4156-8be6-449de51728a1" />
+
+Clearly the same sum and carry logic applies, but without the arrays of carry wires being needed. And since the adder can be parametrized, this one can be an 8-bit multiplier instead:
 
 <img width="1131" height="889" alt="image" src="https://github.com/user-attachments/assets/3fd3817e-a943-4c34-9aed-60f831beaaa5" />
 
