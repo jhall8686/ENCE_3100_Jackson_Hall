@@ -25,7 +25,7 @@ In order to build an 8-bit counter from these modules, I went straight to the to
 
 This essentially follows the above schematic (except doubled). The assign statements in between the tff0 modules handle the AND gates between the output of the module and its enable bit. It also translates the output into two 7 segment displays, so when uploaded to the DE10, it looks like this:
 
-<img width = "200" src = "board_rec1.gif"/>
+<img width = "200" src = "img/board_rec1.gif"/>
 
 ### Part 2- 16-Bit Counter with always
 
@@ -39,7 +39,7 @@ This does the same thing as if there were 16 of the TFF modules strung together,
 
 Now this functions similarly to the previous one, but with 4 hexadecimal digits as an output:
 
-<img width = "200" src = "board_rec2.gif"/>
+<img width = "200" src = "img/board_rec2.gif"/>
 
 ### Part 3- 16-Bit LPM Counter (Built-in)
 
@@ -53,7 +53,7 @@ Here, we can choose the input size and ensure that there is a clear input to mat
 
 And it functions the exact same, except for the clear bit being active high:
 
-<img width = "200" src = "board_rec3.gif"/>
+<img width = "200" src = "img/board_rec3.gif"/>
 
 ### Part 4- 1-Second Decimal Counter
 
@@ -69,7 +69,7 @@ Connecting to the top module and decoding the 4-bit number into 7 segment:
 
 And when uploaded to the DE10, it increments every 1 second.
 
-<img width = "200" src = "board_rec4.gif"/>
+<img width = "200" src = "img/board_rec4.gif"/>
 
 ### Part 5- Rotating HELLO
 
@@ -104,5 +104,5 @@ Implementing this into the top module:
 
 When this code is uploaded to the DE10, the six 7-segment displays rotate through each bit and attain an overall look of the word 'HELLO' shifting.
 
-<img width = "200" src = "board_rec5.gif"/>
+<img width = "200" src = "img/board_rec5.gif"/>
 
