@@ -22,3 +22,26 @@ Implementing the accumulator in the top module:
 
 This takes the output and converts it into a 2-digit BCD number to be displayed with the 7-segment displays. When uploaded to the DE10, it behaves as expected:
 
+<img src="img/board_rec1.gif"/>
+
+### Part 2 - Accumulator/Subtractor
+
+This circuit is largely the same as in Part 1, but includes an input subtract bit, which determines whether input A get subtracted from the final sum or added to it. the accumulator circuit changes as follows:
+
+<img width="952" height="415" alt="image" src="https://github.com/user-attachments/assets/dd173bf7-b3d2-4deb-b691-4fc48b3cb0b2" />
+
+The only line that changes is the ALU line, which has been swapped for a ternary statement that instead performs subtraction if the subtract bit is 1. Implementing this in the top module:
+
+<img width="595" height="507" alt="image" src="https://github.com/user-attachments/assets/a0049611-d495-44fd-8b10-6472d2fa98cf" />
+
+And synthesizing on the DE10:
+
+<img src="img/board_rec2.gif"/>
+
+### Part 3 - Multiplication with Full Adders
+
+Multiplication by hand is done by adding shifted summands, and in digital logic, it is done much in the same way.
+
+<img height="600" alt="image" src="https://github.com/user-attachments/assets/3a68fbd6-2c30-43c9-9749-4854d35f697a" /> <img height="600" alt="image" src="https://github.com/user-attachments/assets/280cf0aa-6140-477b-8b6b-f9b31e913102" />
+
+
