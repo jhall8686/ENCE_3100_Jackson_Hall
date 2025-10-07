@@ -55,6 +55,8 @@ And it functions the exact same, except for the clear bit being active high:
 
 <img width = "400" src = "img/board_rec3.gif"/>
 
+_(SW1 is low while the counter is functioning, indicating an active-high clear pin)_
+
 ### Part 4- 1-Second Decimal Counter
 
 In this part, the goal is to have the seven segment display incrementing every 1 second and rolling over at 9. To do this, first a 1 second counter is needed. This can be done by building a 50MHz counter that increments a separate variable when the counter reaches 50,000,000 and resets it back to 0:
