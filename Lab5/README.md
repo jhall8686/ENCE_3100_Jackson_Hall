@@ -64,11 +64,11 @@ And synthesized on the DE10:
 
 This part will forego the full adders in favor of an equivalent circuit, the ripple carry adder, the size of which can also be parametrized. It will also use memory elements to synchronize multiplication results with the clock:
 
+<img width="552" height="314" alt="image" src="https://github.com/user-attachments/assets/bf5c33e0-4005-4035-aa25-e8801072595c" />
+
 <img width="604" height="386" alt="image" src="https://github.com/user-attachments/assets/27dfe4c5-7221-4c7e-9a29-f478dd1aab70" />
 
 _**(The multiplier will be 8-bit rather than 5-bit and will have a 16-bit output)**_
-
-<img width="552" height="314" alt="image" src="https://github.com/user-attachments/assets/bf5c33e0-4005-4035-aa25-e8801072595c" />
 
 Implementing this for a multiplier is very similar to [Part 3](#part-3---4-bit-multiplication-with-full-adders):
 
