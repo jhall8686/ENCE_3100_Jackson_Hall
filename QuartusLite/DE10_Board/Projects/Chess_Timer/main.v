@@ -83,4 +83,5 @@ module main(
 	.HEX5(HEX5)
 	);
 	
+	assign LEDR[1:0] = w_state_displays;
 endmodule

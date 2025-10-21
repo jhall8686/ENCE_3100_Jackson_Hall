@@ -16,19 +16,19 @@ module display_controller(
 	// **************************************************
 	
 	always @(*) begin
-	
+		
 		HEX0 = 8'hFF;
 		HEX1 = 8'hFF;
 		HEX2 = 8'hFF;
 		HEX3 = 8'hFF;
 		HEX4 = 8'hFF;
 		HEX5 = 8'hFF;
-	
+		
 		case(state_displays)
 		
 			2'b00: begin
 				HEX0 = 8'b11000000; // O
-				HEX1 = 8'b10000010; // G
+				HEX1 = 8'b11000010; // G
 				HEX2 = 8'hFF;
 				HEX3 = 8'hFF;
 				HEX4 = 8'hFF;
@@ -50,8 +50,22 @@ module display_controller(
 				HEX4[7] = 1'b1;
 				HEX5[7] = 1'b1;
 			end
-			
 			2'b10: begin
+				HEX0 = w_HEX0;
+				HEX1 = w_HEX1;
+				HEX2 = w_HEX2;
+				HEX3 = w_HEX3;
+				HEX4 = w_HEX4;
+				HEX5 = w_HEX5;
+				
+				HEX0[7] = 1'b1;
+				HEX1[7] = 1'b1;
+				HEX2[7] = 1'b1;
+				HEX3[7] = 1'b0;
+				HEX4[7] = 1'b1;
+				HEX5[7] = 1'b1;
+			end
+			2'b11: begin
 				HEX1 = 8'b10001100;  // P
 				HEX2 = 8'b10000110;  // E
 				HEX3 = 8'b10101011;  // n

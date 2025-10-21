@@ -1,7 +1,7 @@
 
 State Machine - |main|FSM_ChessTimer:ChessTimer_Control|state
-Name state.S_DONE state.S_P2 state.S_P1 state.S_IDLE 
-state.S_IDLE 0 0 0 0 
-state.S_P1 0 0 1 1 
-state.S_P2 0 1 0 1 
-state.S_DONE 1 0 0 1 
+Name state.END state.P2 state.P1 state.START 
+state.START 0 0 0 0 
+state.P1 0 0 1 1 
+state.P2 0 1 0 1 
+state.END 1 0 0 1 

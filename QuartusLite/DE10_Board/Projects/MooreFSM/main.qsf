@@ -422,4 +422,5 @@ set_global_assignment -name VERILOG_FILE FSM_Moore.v
 set_global_assignment -name VERILOG_FILE output_files/FSM_chess_clock.v
 set_global_assignment -name VERILOG_FILE output_files/FSM_Bakery.v
 set_global_assignment -name VERILOG_FILE output_files/counter_1s.v
+set_global_assignment -name VERILOG_FILE FSM_HW.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

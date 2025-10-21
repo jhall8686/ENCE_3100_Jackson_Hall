@@ -1,5 +1,5 @@
 Analysis & Synthesis report for main
-Tue Oct 14 11:18:31 2025
+Mon Oct 20 23:43:38 2025
 Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 
 
@@ -13,26 +13,27 @@ Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
+  8. State Machine - |main|FSM_ChessTimer:ChessTimer_Control|state
+  9. Registers Removed During Synthesis
  10. General Register Statistics
- 11. Parameter Settings for User Entity Instance: counter_1s:Count_1sec
- 12. Parameter Settings for User Entity Instance: counter_Nbits:Counter_1
- 13. Parameter Settings for User Entity Instance: counter_Nbits:Counter_2
- 14. Port Connectivity Checks: "display_controller:DispTime|BCD_Decoder:Seg7_5"
- 15. Port Connectivity Checks: "display_controller:DispTime|BCD_Decoder:Seg7_4"
- 16. Port Connectivity Checks: "display_controller:DispTime|BCD_Decoder:Seg7_3"
- 17. Port Connectivity Checks: "display_controller:DispTime|bin10_to_bcd3:bin2BCD_2"
- 18. Port Connectivity Checks: "display_controller:DispTime|BCD_Decoder:Seg7_2"
- 19. Port Connectivity Checks: "display_controller:DispTime|BCD_Decoder:Seg7_1"
- 20. Port Connectivity Checks: "display_controller:DispTime|BCD_Decoder:Seg7_0"
- 21. Port Connectivity Checks: "display_controller:DispTime|bin10_to_bcd3:bin2BCD_1"
- 22. Port Connectivity Checks: "counter_Nbits:Counter_2"
- 23. Port Connectivity Checks: "counter_Nbits:Counter_1"
- 24. Port Connectivity Checks: "counter_1s:Count_1sec"
- 25. Post-Synthesis Netlist Statistics for Top Partition
- 26. Elapsed Time Per Partition
- 27. Analysis & Synthesis Messages
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: counter_1s:Count_1sec
+ 13. Parameter Settings for User Entity Instance: counter_Nbits:Counter_1
+ 14. Parameter Settings for User Entity Instance: counter_Nbits:Counter_2
+ 15. Port Connectivity Checks: "display_controller:DispTime|BCD_Decoder:Seg7_5"
+ 16. Port Connectivity Checks: "display_controller:DispTime|BCD_Decoder:Seg7_4"
+ 17. Port Connectivity Checks: "display_controller:DispTime|BCD_Decoder:Seg7_3"
+ 18. Port Connectivity Checks: "display_controller:DispTime|bin10_to_bcd3:bin2BCD_2"
+ 19. Port Connectivity Checks: "display_controller:DispTime|BCD_Decoder:Seg7_2"
+ 20. Port Connectivity Checks: "display_controller:DispTime|BCD_Decoder:Seg7_1"
+ 21. Port Connectivity Checks: "display_controller:DispTime|BCD_Decoder:Seg7_0"
+ 22. Port Connectivity Checks: "display_controller:DispTime|bin10_to_bcd3:bin2BCD_1"
+ 23. Port Connectivity Checks: "counter_Nbits:Counter_2"
+ 24. Port Connectivity Checks: "counter_Nbits:Counter_1"
+ 25. Port Connectivity Checks: "counter_1s:Count_1sec"
+ 26. Post-Synthesis Netlist Statistics for Top Partition
+ 27. Elapsed Time Per Partition
+ 28. Analysis & Synthesis Messages
 
 
 
@@ -59,15 +60,15 @@ on the Quartus Prime software download page.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Oct 14 11:18:31 2025           ;
+; Analysis & Synthesis Status        ; Successful - Mon Oct 20 23:43:38 2025           ;
 ; Quartus Prime Version              ; 24.1std.0 Build 1077 03/04/2025 SC Lite Edition ;
 ; Revision Name                      ; main                                            ;
 ; Top-level Entity Name              ; main                                            ;
 ; Family                             ; MAX 10                                          ;
-; Total logic elements               ; 0                                               ;
-;     Total combinational functions  ; 0                                               ;
-;     Dedicated logic registers      ; 0                                               ;
-; Total registers                    ; 0                                               ;
+; Total logic elements               ; 250                                             ;
+;     Total combinational functions  ; 250                                             ;
+;     Dedicated logic registers      ; 50                                              ;
+; Total registers                    ; 50                                              ;
 ; Total pins                         ; 71                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -173,95 +174,107 @@ on the Quartus Prime software download page.
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                       ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                   ; Library ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------+---------+
-; main.v                           ; yes             ; User Verilog HDL File        ; C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v               ;         ;
-; display_controller.v             ; yes             ; User Verilog HDL File        ; C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/display_controller.v ;         ;
-; bin10_to_bcd3.v                  ; yes             ; User Verilog HDL File        ; C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/bin10_to_bcd3.v      ;         ;
-; counter_Nbits.v                  ; yes             ; User Verilog HDL File        ; C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/counter_Nbits.v      ;         ;
-; fsm_chesstimer.v                 ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/fsm_chesstimer.v     ;         ;
-; counter_1s.v                     ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/counter_1s.v         ;         ;
-; bcd_decoder.v                    ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/bcd_decoder.v        ;         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                              ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                          ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------+---------+
+; main.v                           ; yes             ; User Verilog HDL File        ; C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v               ;         ;
+; display_controller.v             ; yes             ; User Verilog HDL File        ; C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/display_controller.v ;         ;
+; bin10_to_bcd3.v                  ; yes             ; User Verilog HDL File        ; C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/bin10_to_bcd3.v      ;         ;
+; counter_Nbits.v                  ; yes             ; User Verilog HDL File        ; C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/counter_Nbits.v      ;         ;
+; fsm_chesstimer.v                 ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/fsm_chesstimer.v     ;         ;
+; counter_1s.v                     ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/counter_1s.v         ;         ;
+; bcd_decoder.v                    ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/bcd_decoder.v        ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                 ;
-+---------------------------------------------+---------------+
-; Resource                                    ; Usage         ;
-+---------------------------------------------+---------------+
-;                                             ;               ;
-; Total combinational functions               ; 0             ;
-; Logic element usage by number of LUT inputs ;               ;
-;     -- 4 input functions                    ; 0             ;
-;     -- 3 input functions                    ; 0             ;
-;     -- <=2 input functions                  ; 0             ;
-;                                             ;               ;
-; Logic elements by mode                      ;               ;
-;     -- normal mode                          ; 0             ;
-;     -- arithmetic mode                      ; 0             ;
-;                                             ;               ;
-; Total registers                             ; 0             ;
-;     -- Dedicated logic registers            ; 0             ;
-;     -- I/O registers                        ; 0             ;
-;                                             ;               ;
-; I/O pins                                    ; 71            ;
-;                                             ;               ;
-; Embedded Multiplier 9-bit elements          ; 0             ;
-;                                             ;               ;
-; Maximum fan-out node                        ; MAX10_CLK1_50 ;
-; Maximum fan-out                             ; 1             ;
-; Total fan-out                               ; 71            ;
-; Average fan-out                             ; 0.50          ;
-+---------------------------------------------+---------------+
++---------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                 ;
++---------------------------------------------+-----------------------------------------------+
+; Resource                                    ; Usage                                         ;
++---------------------------------------------+-----------------------------------------------+
+; Estimated Total logic elements              ; 250                                           ;
+;                                             ;                                               ;
+; Total combinational functions               ; 250                                           ;
+; Logic element usage by number of LUT inputs ;                                               ;
+;     -- 4 input functions                    ; 172                                           ;
+;     -- 3 input functions                    ; 21                                            ;
+;     -- <=2 input functions                  ; 57                                            ;
+;                                             ;                                               ;
+; Logic elements by mode                      ;                                               ;
+;     -- normal mode                          ; 207                                           ;
+;     -- arithmetic mode                      ; 43                                            ;
+;                                             ;                                               ;
+; Total registers                             ; 50                                            ;
+;     -- Dedicated logic registers            ; 50                                            ;
+;     -- I/O registers                        ; 0                                             ;
+;                                             ;                                               ;
+; I/O pins                                    ; 71                                            ;
+;                                             ;                                               ;
+; Embedded Multiplier 9-bit elements          ; 0                                             ;
+;                                             ;                                               ;
+; Maximum fan-out node                        ; FSM_ChessTimer:ChessTimer_Control|state.START ;
+; Maximum fan-out                             ; 61                                            ;
+; Total fan-out                               ; 1158                                          ;
+; Average fan-out                             ; 2.62                                          ;
++---------------------------------------------+-----------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; |main                      ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 71   ; 0            ; 0          ; |main               ; main        ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                         ;
++----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                       ; Entity Name        ; Library Name ;
++----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------+--------------------+--------------+
+; |main                                  ; 250 (1)             ; 50 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 71   ; 0            ; 0          ; |main                                                     ; main               ; work         ;
+;    |FSM_ChessTimer:ChessTimer_Control| ; 12 (12)             ; 3 (3)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|FSM_ChessTimer:ChessTimer_Control                   ; FSM_ChessTimer     ; work         ;
+;    |counter_1s:Count_1sec|             ; 36 (36)             ; 27 (27)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|counter_1s:Count_1sec                               ; counter_1s         ; work         ;
+;    |counter_Nbits:Counter_1|           ; 10 (10)             ; 10 (10)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|counter_Nbits:Counter_1                             ; counter_Nbits      ; work         ;
+;    |counter_Nbits:Counter_2|           ; 10 (10)             ; 10 (10)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|counter_Nbits:Counter_2                             ; counter_Nbits      ; work         ;
+;    |display_controller:DispTime|       ; 181 (47)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_controller:DispTime                         ; display_controller ; work         ;
+;       |BCD_Decoder:Seg7_0|             ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_controller:DispTime|BCD_Decoder:Seg7_0      ; BCD_Decoder        ; work         ;
+;       |BCD_Decoder:Seg7_1|             ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_controller:DispTime|BCD_Decoder:Seg7_1      ; BCD_Decoder        ; work         ;
+;       |BCD_Decoder:Seg7_2|             ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_controller:DispTime|BCD_Decoder:Seg7_2      ; BCD_Decoder        ; work         ;
+;       |BCD_Decoder:Seg7_3|             ; 9 (9)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_controller:DispTime|BCD_Decoder:Seg7_3      ; BCD_Decoder        ; work         ;
+;       |BCD_Decoder:Seg7_4|             ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_controller:DispTime|BCD_Decoder:Seg7_4      ; BCD_Decoder        ; work         ;
+;       |BCD_Decoder:Seg7_5|             ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_controller:DispTime|BCD_Decoder:Seg7_5      ; BCD_Decoder        ; work         ;
+;       |bin10_to_bcd3:bin2BCD_1|        ; 49 (49)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_controller:DispTime|bin10_to_bcd3:bin2BCD_1 ; bin10_to_bcd3      ; work         ;
+;       |bin10_to_bcd3:bin2BCD_2|        ; 45 (45)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_controller:DispTime|bin10_to_bcd3:bin2BCD_2 ; bin10_to_bcd3      ; work         ;
++----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-------------------------------------------------------------+
-; Registers Removed During Synthesis                          ;
-+----------------------------------------+--------------------+
-; Register name                          ; Reason for Removal ;
-+----------------------------------------+--------------------+
-; counter_Nbits:Counter_2|o_count[0..9]  ; Lost fanout        ;
-; counter_Nbits:Counter_1|o_count[0..9]  ; Lost fanout        ;
-; counter_1s:Count_1sec|counter[0]       ; Lost fanout        ;
-; counter_1s:Count_1sec|o_strobe         ; Lost fanout        ;
-; counter_1s:Count_1sec|counter[1..25]   ; Lost fanout        ;
-; Total Number of Removed Registers = 47 ;                    ;
-+----------------------------------------+--------------------+
+Encoding Type:  One-Hot
++---------------------------------------------------------------+
+; State Machine - |main|FSM_ChessTimer:ChessTimer_Control|state ;
++-------------+-----------+----------+----------+---------------+
+; Name        ; state.END ; state.P2 ; state.P1 ; state.START   ;
++-------------+-----------+----------+----------+---------------+
+; state.START ; 0         ; 0        ; 0        ; 0             ;
+; state.P1    ; 0         ; 0        ; 1        ; 1             ;
+; state.P2    ; 0         ; 1        ; 0        ; 1             ;
+; state.END   ; 1         ; 0        ; 0        ; 1             ;
++-------------+-----------+----------+----------+---------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                     ;
-+------------------------------------+--------------------+-----------------------------------------------------------------------+
-; Register name                      ; Reason for Removal ; Registers Removed due to This Register                                ;
-+------------------------------------+--------------------+-----------------------------------------------------------------------+
-; counter_Nbits:Counter_2|o_count[0] ; Lost Fanouts       ; counter_1s:Count_1sec|o_strobe, counter_1s:Count_1sec|counter[14],    ;
-;                                    ;                    ; counter_1s:Count_1sec|counter[15], counter_1s:Count_1sec|counter[17], ;
-;                                    ;                    ; counter_1s:Count_1sec|counter[19]                                     ;
-; counter_1s:Count_1sec|counter[0]   ; Lost Fanouts       ; counter_1s:Count_1sec|counter[20], counter_1s:Count_1sec|counter[21], ;
-;                                    ;                    ; counter_1s:Count_1sec|counter[22], counter_1s:Count_1sec|counter[23], ;
-;                                    ;                    ; counter_1s:Count_1sec|counter[25]                                     ;
-+------------------------------------+--------------------+-----------------------------------------------------------------------+
++------------------------------------------------------------------+
+; Registers Removed During Synthesis                               ;
++---------------------------------------------+--------------------+
+; Register name                               ; Reason for Removal ;
++---------------------------------------------+--------------------+
+; FSM_ChessTimer:ChessTimer_Control|state~2   ; Lost fanout        ;
+; FSM_ChessTimer:ChessTimer_Control|state~3   ; Lost fanout        ;
+; FSM_ChessTimer:ChessTimer_Control|state.END ; Lost fanout        ;
+; Total Number of Removed Registers = 3       ;                    ;
++---------------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -269,14 +282,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Total registers                              ; 50    ;
+; Number of registers using Synchronous Clear  ; 26    ;
+; Number of registers using Synchronous Load   ; 20    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 20    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |main|counter_Nbits:Counter_1|o_count[4] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |main|counter_Nbits:Counter_2|o_count[0] ;
+; 3:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |main|counter_1s:Count_1sec|counter[24]  ;
+; 4:1                ; 24 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |main|display_controller:DispTime|Mux9   ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |main|display_controller:DispTime|Mux28  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
 
 
 +--------------------------------------------------------------------+
@@ -423,12 +449,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 71                          ;
-; cycloneiii_lcell_comb ; 2                           ;
-;     normal            ; 2                           ;
+; cycloneiii_ff         ; 50                          ;
+;     ENA SLD           ; 20                          ;
+;     SCLR              ; 26                          ;
+;     plain             ; 4                           ;
+; cycloneiii_lcell_comb ; 254                         ;
+;     arith             ; 43                          ;
+;         2 data inputs ; 43                          ;
+;     normal            ; 211                         ;
 ;         0 data inputs ; 2                           ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 10                          ;
+;         3 data inputs ; 21                          ;
+;         4 data inputs ; 172                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
+; Max LUT depth         ; 10.00                       ;
+; Average LUT depth     ; 5.91                        ;
 +-----------------------+-----------------------------+
 
 
@@ -437,7 +473,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -447,103 +483,54 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
-    Info: Processing started: Tue Oct 14 11:18:23 2025
+    Info: Processing started: Mon Oct 20 23:43:28 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off main -c main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file main.v
-    Info (12023): Found entity 1: main File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 1
+    Info (12023): Found entity 1: main File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 1
 Warning (12019): Can't analyze file -- file blocking_swap_demo.v is missing
 Warning (12019): Can't analyze file -- file nb_swap_demo.v is missing
 Warning (12019): Can't analyze file -- file FSM_Moore.v is missing
 Info (12021): Found 1 design units, including 1 entities, in source file display_controller.v
-    Info (12023): Found entity 1: display_controller File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/display_controller.v Line: 1
+    Info (12023): Found entity 1: display_controller File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/display_controller.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file bin10_to_bcd3.v
-    Info (12023): Found entity 1: bin10_to_bcd3 File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/bin10_to_bcd3.v Line: 6
+    Info (12023): Found entity 1: bin10_to_bcd3 File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/bin10_to_bcd3.v Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file counter_nbits.v
-    Info (12023): Found entity 1: counter_Nbits File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/counter_Nbits.v Line: 4
+    Info (12023): Found entity 1: counter_Nbits File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/counter_Nbits.v Line: 4
 Info (12127): Elaborating entity "main" for the top level hierarchy
-Warning (10034): Output port "LEDR" at main.v(6) has no driver File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 6
+Warning (10034): Output port "LEDR[9..2]" at main.v(6) has no driver File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 6
 Warning (12125): Using design file fsm_chesstimer.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: FSM_ChessTimer File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/fsm_chesstimer.v Line: 1
-Info (12128): Elaborating entity "FSM_ChessTimer" for hierarchy "FSM_ChessTimer:ChessTimer_Control" File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 35
-Warning (10034): Output port "load_counters" at fsm_chesstimer.v(7) has no driver File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/fsm_chesstimer.v Line: 7
-Warning (10034): Output port "en_counters" at fsm_chesstimer.v(8) has no driver File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/fsm_chesstimer.v Line: 8
-Warning (10034): Output port "state_displays" at fsm_chesstimer.v(10) has no driver File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/fsm_chesstimer.v Line: 10
-Warning (12158): Entity "FSM_ChessTimer" contains only dangling pins File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 35
+    Info (12023): Found entity 1: FSM_ChessTimer File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/fsm_chesstimer.v Line: 1
+Info (12128): Elaborating entity "FSM_ChessTimer" for hierarchy "FSM_ChessTimer:ChessTimer_Control" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 35
 Warning (12125): Using design file counter_1s.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: counter_1s File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/counter_1s.v Line: 4
-Info (12128): Elaborating entity "counter_1s" for hierarchy "counter_1s:Count_1sec" File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 49
-Warning (10230): Verilog HDL assignment warning at counter_1s.v(31): truncated value with size 32 to match size of target (26) File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/counter_1s.v Line: 31
-Info (12128): Elaborating entity "counter_Nbits" for hierarchy "counter_Nbits:Counter_1" File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 59
-Info (12128): Elaborating entity "display_controller" for hierarchy "display_controller:DispTime" File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 84
-Warning (10270): Verilog HDL Case Statement warning at display_controller.v(27): incomplete case statement has no default case item File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/display_controller.v Line: 27
-Info (12128): Elaborating entity "bin10_to_bcd3" for hierarchy "display_controller:DispTime|bin10_to_bcd3:bin2BCD_1" File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/display_controller.v Line: 80
+    Info (12023): Found entity 1: counter_1s File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/counter_1s.v Line: 4
+Info (12128): Elaborating entity "counter_1s" for hierarchy "counter_1s:Count_1sec" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 49
+Warning (10230): Verilog HDL assignment warning at counter_1s.v(31): truncated value with size 32 to match size of target (26) File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/counter_1s.v Line: 31
+Info (12128): Elaborating entity "counter_Nbits" for hierarchy "counter_Nbits:Counter_1" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 59
+Info (12128): Elaborating entity "display_controller" for hierarchy "display_controller:DispTime" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 84
+Info (12128): Elaborating entity "bin10_to_bcd3" for hierarchy "display_controller:DispTime|bin10_to_bcd3:bin2BCD_1" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/display_controller.v Line: 94
 Warning (12125): Using design file bcd_decoder.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: BCD_Decoder File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/bcd_decoder.v Line: 4
-Info (12128): Elaborating entity "BCD_Decoder" for hierarchy "display_controller:DispTime|BCD_Decoder:Seg7_0" File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/display_controller.v Line: 85
-Warning (10270): Verilog HDL Case Statement warning at bcd_decoder.v(14): incomplete case statement has no default case item File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/bcd_decoder.v Line: 14
+    Info (12023): Found entity 1: BCD_Decoder File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/bcd_decoder.v Line: 4
+Info (12128): Elaborating entity "BCD_Decoder" for hierarchy "display_controller:DispTime|BCD_Decoder:Seg7_0" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/display_controller.v Line: 99
+Warning (10270): Verilog HDL Case Statement warning at bcd_decoder.v(14): incomplete case statement has no default case item File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/bcd_decoder.v Line: 14
 Warning (12241): 6 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 6
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 6
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 6
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 6
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 6
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 6
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 6
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 6
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 6
-    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 6
-    Warning (13410): Pin "HEX0[0]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 7
-    Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 7
-    Warning (13410): Pin "HEX0[2]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 7
-    Warning (13410): Pin "HEX0[3]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 7
-    Warning (13410): Pin "HEX0[4]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 7
-    Warning (13410): Pin "HEX0[5]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 7
-    Warning (13410): Pin "HEX0[6]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 7
-    Warning (13410): Pin "HEX0[7]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 7
-    Warning (13410): Pin "HEX1[0]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 8
-    Warning (13410): Pin "HEX1[1]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 8
-    Warning (13410): Pin "HEX1[2]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 8
-    Warning (13410): Pin "HEX1[3]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 8
-    Warning (13410): Pin "HEX1[4]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 8
-    Warning (13410): Pin "HEX1[5]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 8
-    Warning (13410): Pin "HEX1[6]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 8
-    Warning (13410): Pin "HEX1[7]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 8
-    Warning (13410): Pin "HEX2[0]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 9
-    Warning (13410): Pin "HEX2[1]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 9
-    Warning (13410): Pin "HEX2[2]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 9
-    Warning (13410): Pin "HEX2[3]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 9
-    Warning (13410): Pin "HEX2[4]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 9
-    Warning (13410): Pin "HEX2[5]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 9
-    Warning (13410): Pin "HEX2[6]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 9
-    Warning (13410): Pin "HEX2[7]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 9
-    Warning (13410): Pin "HEX3[0]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 10
-    Warning (13410): Pin "HEX3[1]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 10
-    Warning (13410): Pin "HEX3[2]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 10
-    Warning (13410): Pin "HEX3[3]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 10
-    Warning (13410): Pin "HEX3[4]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 10
-    Warning (13410): Pin "HEX3[5]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 10
-    Warning (13410): Pin "HEX3[6]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 10
-    Warning (13410): Pin "HEX3[7]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 10
-    Warning (13410): Pin "HEX4[0]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 11
-    Warning (13410): Pin "HEX4[1]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 11
-    Warning (13410): Pin "HEX4[2]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 11
-    Warning (13410): Pin "HEX4[3]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 11
-    Warning (13410): Pin "HEX4[4]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 11
-    Warning (13410): Pin "HEX4[5]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 11
-    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 11
-    Warning (13410): Pin "HEX4[7]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 11
-    Warning (13410): Pin "HEX5[0]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 13
-    Warning (13410): Pin "HEX5[1]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 13
-    Warning (13410): Pin "HEX5[2]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 13
-    Warning (13410): Pin "HEX5[3]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 13
-    Warning (13410): Pin "HEX5[4]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 13
-    Warning (13410): Pin "HEX5[5]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 13
-    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 13
-    Warning (13410): Pin "HEX5[7]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 13
-Info (17049): 47 registers lost all their fanouts during netlist optimizations.
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 6
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 6
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 6
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 6
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 6
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 6
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 6
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 6
+    Warning (13410): Pin "HEX0[7]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 7
+    Warning (13410): Pin "HEX1[7]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 8
+    Warning (13410): Pin "HEX2[7]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 9
+    Warning (13410): Pin "HEX4[7]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 11
+    Warning (13410): Pin "HEX5[7]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 13
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Warning (20013): Ignored 209 assignments for entity "DE10_LITE_Golden_Top" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_CLK_10 -entity DE10_LITE_Golden_Top was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[0] -entity DE10_LITE_Golden_Top was ignored
@@ -756,27 +743,24 @@ Warning (20013): Ignored 209 assignments for entity "DE10_LITE_Golden_Top" -- en
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity DE10_LITE_Golden_Top -section_id Top was ignored
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 13 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "MAX10_CLK1_50" File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 3
-    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 4
-    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 4
-    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 4
-    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 4
-    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 4
-    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 4
-    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 4
-    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 4
-    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 4
-    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 4
-    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 5
-    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 5
-Info (21057): Implemented 71 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 9 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 4
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 4
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 4
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 4
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 4
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 4
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 4
+    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 5
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Chess_Timer/main.v Line: 5
+Info (21057): Implemented 321 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 58 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 299 warnings
-    Info: Peak virtual memory: 4757 megabytes
-    Info: Processing ended: Tue Oct 14 11:18:31 2025
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:20
+    Info (21061): Implemented 250 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 245 warnings
+    Info: Peak virtual memory: 4842 megabytes
+    Info: Processing ended: Mon Oct 20 23:43:38 2025
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:23
 
 

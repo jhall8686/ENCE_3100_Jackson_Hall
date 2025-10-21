@@ -1,5 +1,5 @@
 Analysis & Synthesis report for main
-Tue Oct 14 11:11:04 2025
+Tue Oct 21 00:19:06 2025
 Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 
 
@@ -13,14 +13,13 @@ Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |main|FSM_Bakery:fsmb0|state
+  8. State Machine - |main|FSM_HW:fsmb0|state
   9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+ 10. General Register Statistics
+ 11. Port Connectivity Checks: "counter_1s:comb_3"
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -47,15 +46,15 @@ on the Quartus Prime software download page.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Oct 14 11:11:04 2025           ;
+; Analysis & Synthesis Status        ; Successful - Tue Oct 21 00:19:06 2025           ;
 ; Quartus Prime Version              ; 24.1std.0 Build 1077 03/04/2025 SC Lite Edition ;
 ; Revision Name                      ; main                                            ;
 ; Top-level Entity Name              ; main                                            ;
 ; Family                             ; MAX 10                                          ;
-; Total logic elements               ; 54                                              ;
-;     Total combinational functions  ; 54                                              ;
-;     Dedicated logic registers      ; 30                                              ;
-; Total registers                    ; 30                                              ;
+; Total logic elements               ; 10                                              ;
+;     Total combinational functions  ; 10                                              ;
+;     Dedicated logic registers      ; 8                                               ;
+; Total registers                    ; 8                                               ;
 ; Total pins                         ; 59                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -169,72 +168,75 @@ on the Quartus Prime software download page.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                   ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                     ; Library ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------------------+---------+
-; main.v                           ; yes             ; User Verilog HDL File  ; C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v                    ;         ;
-; output_files/FSM_Bakery.v        ; yes             ; User Verilog HDL File  ; C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/output_files/FSM_Bakery.v ;         ;
-; output_files/counter_1s.v        ; yes             ; User Verilog HDL File  ; C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/output_files/counter_1s.v ;         ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                          ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                                            ; Library ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
+; main.v                           ; yes             ; User Verilog HDL File  ; C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v                    ;         ;
+; output_files/counter_1s.v        ; yes             ; User Verilog HDL File  ; C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/output_files/counter_1s.v ;         ;
+; FSM_HW.v                         ; yes             ; User Verilog HDL File  ; C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/FSM_HW.v                  ;         ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                       ;
-+---------------------------------------------+---------------------+
-; Resource                                    ; Usage               ;
-+---------------------------------------------+---------------------+
-; Estimated Total logic elements              ; 54                  ;
-;                                             ;                     ;
-; Total combinational functions               ; 54                  ;
-; Logic element usage by number of LUT inputs ;                     ;
-;     -- 4 input functions                    ; 8                   ;
-;     -- 3 input functions                    ; 14                  ;
-;     -- <=2 input functions                  ; 32                  ;
-;                                             ;                     ;
-; Logic elements by mode                      ;                     ;
-;     -- normal mode                          ; 29                  ;
-;     -- arithmetic mode                      ; 25                  ;
-;                                             ;                     ;
-; Total registers                             ; 30                  ;
-;     -- Dedicated logic registers            ; 30                  ;
-;     -- I/O registers                        ; 0                   ;
-;                                             ;                     ;
-; I/O pins                                    ; 59                  ;
-;                                             ;                     ;
-; Embedded Multiplier 9-bit elements          ; 0                   ;
-;                                             ;                     ;
-; Maximum fan-out node                        ; MAX10_CLK1_50~input ;
-; Maximum fan-out                             ; 27                  ;
-; Total fan-out                               ; 298                 ;
-; Average fan-out                             ; 1.25                ;
-+---------------------------------------------+---------------------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 10          ;
+;                                             ;             ;
+; Total combinational functions               ; 10          ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 5           ;
+;     -- 3 input functions                    ; 3           ;
+;     -- <=2 input functions                  ; 2           ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 10          ;
+;     -- arithmetic mode                      ; 0           ;
+;                                             ;             ;
+; Total registers                             ; 8           ;
+;     -- Dedicated logic registers            ; 8           ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 59          ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; SW[0]~input ;
+; Maximum fan-out                             ; 8           ;
+; Total fan-out                               ; 145         ;
+; Average fan-out                             ; 0.84        ;
++---------------------------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name     ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------+-------------+--------------+
-; |main                      ; 54 (0)              ; 30 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 59   ; 0            ; 0          ; |main                   ; main        ; work         ;
-;    |FSM_Bakery:fsmb0|      ; 6 (6)               ; 3 (3)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|FSM_Bakery:fsmb0  ; FSM_Bakery  ; work         ;
-;    |counter_1s:comb_3|     ; 48 (48)             ; 27 (27)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|counter_1s:comb_3 ; counter_1s  ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------+-------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+; |main                      ; 10 (0)              ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 59   ; 0            ; 0          ; |main               ; main        ; work         ;
+;    |FSM_HW:fsmb0|          ; 10 (10)             ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|FSM_HW:fsmb0  ; FSM_HW      ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
-+-------------------------------------------------------------------+
-; State Machine - |main|FSM_Bakery:fsmb0|state                      ;
-+-------------+-------------+------------+-------------+------------+
-; Name        ; state.LEAVE ; state.WAIT ; state.ORDER ; state.TURN ;
-+-------------+-------------+------------+-------------+------------+
-; state.TURN  ; 0           ; 0          ; 0           ; 0          ;
-; state.ORDER ; 0           ; 0          ; 1           ; 1          ;
-; state.WAIT  ; 0           ; 1          ; 0           ; 1          ;
-; state.LEAVE ; 1           ; 0          ; 0           ; 1          ;
-+-------------+-------------+------------+-------------+------------+
++---------------------------------------------------------------------------------------------------------+
+; State Machine - |main|FSM_HW:fsmb0|state                                                                ;
++-----------+-----------+-----------+-----------+-----------+-----------+-----------+----------+----------+
+; Name      ; state.S5b ; state.S5a ; state.S4b ; state.S4a ; state.S3b ; state.S3a ; state.S2 ; state.S1 ;
++-----------+-----------+-----------+-----------+-----------+-----------+-----------+----------+----------+
+; state.S1  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ;
+; state.S2  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1        ; 1        ;
+; state.S3a ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 0        ; 1        ;
+; state.S3b ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 0        ; 1        ;
+; state.S4a ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 0        ; 1        ;
+; state.S4b ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 0        ; 1        ;
+; state.S5a ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 0        ; 1        ;
+; state.S5b ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 1        ;
++-----------+-----------+-----------+-----------+-----------+-----------+-----------+----------+----------+
 
 
 +------------------------------------------------------------+
@@ -242,20 +244,11 @@ Encoding Type:  One-Hot
 +---------------------------------------+--------------------+
 ; Register name                         ; Reason for Removal ;
 +---------------------------------------+--------------------+
-; FSM_Bakery:fsmb0|state~2              ; Lost fanout        ;
-; FSM_Bakery:fsmb0|state~3              ; Lost fanout        ;
-; FSM_Bakery:fsmb0|state.LEAVE          ; Lost fanout        ;
+; FSM_HW:fsmb0|state~2                  ; Lost fanout        ;
+; FSM_HW:fsmb0|state~3                  ; Lost fanout        ;
+; FSM_HW:fsmb0|state~4                  ; Lost fanout        ;
 ; Total Number of Removed Registers = 3 ;                    ;
 +---------------------------------------+--------------------+
-
-
-+----------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                            ;
-+--------------------------+--------------------+----------------------------------------+
-; Register name            ; Reason for Removal ; Registers Removed due to This Register ;
-+--------------------------+--------------------+----------------------------------------+
-; FSM_Bakery:fsmb0|state~2 ; Lost Fanouts       ; FSM_Bakery:fsmb0|state.LEAVE           ;
-+--------------------------+--------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -263,23 +256,23 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 30    ;
+; Total registers                              ; 8     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 3     ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |main|FSM_Bakery:fsmb0|state ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "counter_1s:comb_3"                                                                  ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; tog  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -288,22 +281,18 @@ Encoding Type:  One-Hot
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 59                          ;
-; cycloneiii_ff         ; 30                          ;
-;     ENA               ; 3                           ;
-;     plain             ; 27                          ;
+; cycloneiii_ff         ; 8                           ;
+;     plain             ; 8                           ;
 ; cycloneiii_io_obuf    ; 36                          ;
-; cycloneiii_lcell_comb ; 57                          ;
-;     arith             ; 25                          ;
-;         2 data inputs ; 25                          ;
-;     normal            ; 32                          ;
+; cycloneiii_lcell_comb ; 11                          ;
+;     normal            ; 11                          ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 4                           ;
-;         2 data inputs ; 5                           ;
-;         3 data inputs ; 14                          ;
-;         4 data inputs ; 8                           ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 3                           ;
+;         4 data inputs ; 5                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.50                        ;
-; Average LUT depth     ; 2.44                        ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 0.41                        ;
 +-----------------------+-----------------------------+
 
 
@@ -322,69 +311,74 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
-    Info: Processing started: Tue Oct 14 11:10:57 2025
+    Info: Processing started: Tue Oct 21 00:18:59 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off main -c main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file main.v
-    Info (12023): Found entity 1: main File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 1
+    Info (12023): Found entity 1: main File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file fsm_moore.v
-    Info (12023): Found entity 1: FSM_Moore File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/FSM_Moore.v Line: 1
+    Info (12023): Found entity 1: FSM_Moore File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/FSM_Moore.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file output_files/fsm_chess_clock.v
-    Info (12023): Found entity 1: FSM_chess_clock File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/output_files/FSM_chess_clock.v Line: 1
+    Info (12023): Found entity 1: FSM_chess_clock File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/output_files/FSM_chess_clock.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file output_files/fsm_bakery.v
-    Info (12023): Found entity 1: FSM_Bakery File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/output_files/FSM_Bakery.v Line: 1
+    Info (12023): Found entity 1: FSM_Bakery File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/output_files/FSM_Bakery.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file output_files/counter_1s.v
-    Info (12023): Found entity 1: counter_1s File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/output_files/counter_1s.v Line: 1
-Critical Warning (10846): Verilog HDL Instantiation warning at main.v(11): instance has no name File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 11
+    Info (12023): Found entity 1: counter_1s File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/output_files/counter_1s.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file fsm_hw.v
+    Info (12023): Found entity 1: FSM_HW File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/FSM_HW.v Line: 1
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(11): instance has no name File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 11
 Info (12127): Elaborating entity "main" for the top level hierarchy
-Warning (10034): Output port "LEDR[7..2]" at main.v(5) has no driver File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 5
-Info (12128): Elaborating entity "counter_1s" for hierarchy "counter_1s:comb_3" File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 11
-Info (12128): Elaborating entity "FSM_Bakery" for hierarchy "FSM_Bakery:fsmb0" File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 13
+Warning (10034): Output port "LEDR[9..1]" at main.v(5) has no driver File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 5
+Info (12128): Elaborating entity "counter_1s" for hierarchy "counter_1s:comb_3" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 11
+Info (12128): Elaborating entity "FSM_HW" for hierarchy "FSM_HW:fsmb0" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 13
 Warning (13039): The following bidirectional pins have no drivers
-    Warning (13040): bidirectional pin "GPIO[0]" has no driver File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
-    Warning (13040): bidirectional pin "GPIO[1]" has no driver File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
-    Warning (13040): bidirectional pin "GPIO[2]" has no driver File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
-    Warning (13040): bidirectional pin "GPIO[3]" has no driver File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
-    Warning (13040): bidirectional pin "GPIO[4]" has no driver File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
-    Warning (13040): bidirectional pin "GPIO[5]" has no driver File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
-    Warning (13040): bidirectional pin "GPIO[6]" has no driver File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
-    Warning (13040): bidirectional pin "GPIO[7]" has no driver File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
-    Warning (13040): bidirectional pin "GPIO[8]" has no driver File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
-    Warning (13040): bidirectional pin "GPIO[9]" has no driver File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
-    Warning (13040): bidirectional pin "GPIO[10]" has no driver File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
-    Warning (13040): bidirectional pin "GPIO[11]" has no driver File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
-    Warning (13040): bidirectional pin "GPIO[12]" has no driver File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
-    Warning (13040): bidirectional pin "GPIO[13]" has no driver File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
-    Warning (13040): bidirectional pin "GPIO[14]" has no driver File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
-    Warning (13040): bidirectional pin "GPIO[15]" has no driver File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
-    Warning (13040): bidirectional pin "GPIO[16]" has no driver File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
-    Warning (13040): bidirectional pin "GPIO[17]" has no driver File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
-    Warning (13040): bidirectional pin "GPIO[18]" has no driver File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
-    Warning (13040): bidirectional pin "GPIO[19]" has no driver File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
-    Warning (13040): bidirectional pin "GPIO[20]" has no driver File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
-    Warning (13040): bidirectional pin "GPIO[21]" has no driver File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
-    Warning (13040): bidirectional pin "GPIO[22]" has no driver File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
-    Warning (13040): bidirectional pin "GPIO[23]" has no driver File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
-    Warning (13040): bidirectional pin "GPIO[24]" has no driver File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
-    Warning (13040): bidirectional pin "GPIO[25]" has no driver File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
-    Warning (13040): bidirectional pin "GPIO[26]" has no driver File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
-    Warning (13040): bidirectional pin "GPIO[27]" has no driver File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
-    Warning (13040): bidirectional pin "GPIO[28]" has no driver File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
-    Warning (13040): bidirectional pin "GPIO[29]" has no driver File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
-    Warning (13040): bidirectional pin "GPIO[30]" has no driver File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
-    Warning (13040): bidirectional pin "GPIO[31]" has no driver File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
-    Warning (13040): bidirectional pin "GPIO[32]" has no driver File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
-    Warning (13040): bidirectional pin "GPIO[33]" has no driver File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
-    Warning (13040): bidirectional pin "GPIO[34]" has no driver File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
-    Warning (13040): bidirectional pin "GPIO[35]" has no driver File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
+    Warning (13040): bidirectional pin "GPIO[0]" has no driver File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
+    Warning (13040): bidirectional pin "GPIO[1]" has no driver File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
+    Warning (13040): bidirectional pin "GPIO[2]" has no driver File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
+    Warning (13040): bidirectional pin "GPIO[3]" has no driver File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
+    Warning (13040): bidirectional pin "GPIO[4]" has no driver File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
+    Warning (13040): bidirectional pin "GPIO[5]" has no driver File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
+    Warning (13040): bidirectional pin "GPIO[6]" has no driver File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
+    Warning (13040): bidirectional pin "GPIO[7]" has no driver File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
+    Warning (13040): bidirectional pin "GPIO[8]" has no driver File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
+    Warning (13040): bidirectional pin "GPIO[9]" has no driver File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
+    Warning (13040): bidirectional pin "GPIO[10]" has no driver File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
+    Warning (13040): bidirectional pin "GPIO[11]" has no driver File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
+    Warning (13040): bidirectional pin "GPIO[12]" has no driver File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
+    Warning (13040): bidirectional pin "GPIO[13]" has no driver File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
+    Warning (13040): bidirectional pin "GPIO[14]" has no driver File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
+    Warning (13040): bidirectional pin "GPIO[15]" has no driver File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
+    Warning (13040): bidirectional pin "GPIO[16]" has no driver File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
+    Warning (13040): bidirectional pin "GPIO[17]" has no driver File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
+    Warning (13040): bidirectional pin "GPIO[18]" has no driver File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
+    Warning (13040): bidirectional pin "GPIO[19]" has no driver File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
+    Warning (13040): bidirectional pin "GPIO[20]" has no driver File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
+    Warning (13040): bidirectional pin "GPIO[21]" has no driver File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
+    Warning (13040): bidirectional pin "GPIO[22]" has no driver File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
+    Warning (13040): bidirectional pin "GPIO[23]" has no driver File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
+    Warning (13040): bidirectional pin "GPIO[24]" has no driver File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
+    Warning (13040): bidirectional pin "GPIO[25]" has no driver File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
+    Warning (13040): bidirectional pin "GPIO[26]" has no driver File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
+    Warning (13040): bidirectional pin "GPIO[27]" has no driver File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
+    Warning (13040): bidirectional pin "GPIO[28]" has no driver File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
+    Warning (13040): bidirectional pin "GPIO[29]" has no driver File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
+    Warning (13040): bidirectional pin "GPIO[30]" has no driver File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
+    Warning (13040): bidirectional pin "GPIO[31]" has no driver File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
+    Warning (13040): bidirectional pin "GPIO[32]" has no driver File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
+    Warning (13040): bidirectional pin "GPIO[33]" has no driver File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
+    Warning (13040): bidirectional pin "GPIO[34]" has no driver File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
+    Warning (13040): bidirectional pin "GPIO[35]" has no driver File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 7
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 5
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 5
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 5
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 5
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 5
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 5
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 5
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 5
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 5
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 5
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 5
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 5
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 5
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 5
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 5
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Warning (20013): Ignored 24 assignments for entity "DE10_LITE_Golden_Top" -- entity does not exist in design
@@ -415,24 +409,24 @@ Warning (20013): Ignored 24 assignments for entity "DE10_LITE_Golden_Top" -- ent
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 10 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 3
-    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 3
-    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 3
-    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 3
-    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 3
-    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 3
-    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 3
-    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 3
-    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 4
-    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/Jackson.Hall/Desktop/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 4
-Info (21057): Implemented 113 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "MAX10_CLK1_50" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 2
+    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 3
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 3
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 3
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 3
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 3
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 3
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 3
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 3
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/MooreFSM/main.v Line: 4
+Info (21057): Implemented 69 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 10 output pins
     Info (21060): Implemented 36 bidirectional pins
-    Info (21061): Implemented 54 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 83 warnings
+    Info (21061): Implemented 10 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 86 warnings
     Info: Peak virtual memory: 4842 megabytes
-    Info: Processing ended: Tue Oct 14 11:11:04 2025
+    Info: Processing ended: Tue Oct 21 00:19:06 2025
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:19
 

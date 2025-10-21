@@ -10,18 +10,18 @@ SW[6] => ~NO_FANOUT~
 SW[7] => ~NO_FANOUT~
 SW[8] => ~NO_FANOUT~
 SW[9] => SW[9].IN1
-KEY[0] => ~NO_FANOUT~
+KEY[0] => KEY[0].IN1
 KEY[1] => ~NO_FANOUT~
-LEDR[0] <= FSM_Bakery:fsmb0.b
-LEDR[1] <= FSM_Bakery:fsmb0.p
+LEDR[0] <= FSM_HW:fsmb0.z
+LEDR[1] <= <GND>
 LEDR[2] <= <GND>
 LEDR[3] <= <GND>
 LEDR[4] <= <GND>
 LEDR[5] <= <GND>
 LEDR[6] <= <GND>
 LEDR[7] <= <GND>
-LEDR[8] <= FSM_Bakery:fsmb0.s
-LEDR[9] <= FSM_Bakery:fsmb0.s
+LEDR[8] <= <GND>
+LEDR[9] <= <GND>
 GPIO[0] <> <UNC>
 GPIO[1] <> <UNC>
 GPIO[2] <> <UNC>
@@ -91,21 +91,24 @@ clk => count50M[25].CLK
 tog <= tog~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|FSM_Bakery:fsmb0
+|main|FSM_HW:fsmb0
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
 clk => state~1.DATAIN
-rst => state.OUTPUTSELECT
-rst => state.OUTPUTSELECT
-rst => state.OUTPUTSELECT
-rst => state.OUTPUTSELECT
-w => Selector0.IN3
-w => Selector1.IN3
-w => Selector2.IN3
+w => next_state.S4a.DATAB
+w => Selector1.IN2
+w => next_state.S5b.DATAB
+w => Selector4.IN1
+w => Selector2.IN1
+w => next_state.S4b.DATAB
+w => Selector3.IN1
 w => Selector0.IN1
-w => Selector1.IN1
-w => next_state.TURN.DATAB
-b <= b.DB_MAX_OUTPUT_PORT_TYPE
-p <= p.DB_MAX_OUTPUT_PORT_TYPE
-s[0] <= s.DB_MAX_OUTPUT_PORT_TYPE
-s[1] <= s.DB_MAX_OUTPUT_PORT_TYPE
+z <= always2.DB_MAX_OUTPUT_PORT_TYPE
 
 

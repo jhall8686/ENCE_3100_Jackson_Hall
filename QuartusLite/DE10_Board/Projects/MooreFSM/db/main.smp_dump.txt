@@ -1,7 +1,11 @@
 
-State Machine - |main|FSM_Bakery:fsmb0|state
-Name state.LEAVE state.WAIT state.ORDER state.TURN 
-state.TURN 0 0 0 0 
-state.ORDER 0 0 1 1 
-state.WAIT 0 1 0 1 
-state.LEAVE 1 0 0 1 
+State Machine - |main|FSM_HW:fsmb0|state
+Name state.S5b state.S5a state.S4b state.S4a state.S3b state.S3a state.S2 state.S1 
+state.S1 0 0 0 0 0 0 0 0 
+state.S2 0 0 0 0 0 0 1 1 
+state.S3a 0 0 0 0 0 1 0 1 
+state.S3b 0 0 0 0 1 0 0 1 
+state.S4a 0 0 0 1 0 0 0 1 
+state.S4b 0 0 1 0 0 0 0 1 
+state.S5a 0 1 0 0 0 0 0 1 
+state.S5b 1 0 0 0 0 0 0 1 
