@@ -22,3 +22,4 @@ This reloads the counters on START, enables one to count down on its respective 
 
 When this state machine is implemented into the surrounding infrastructure, the following behavior is observed:
 
+<img src="img/board_rec_chess.gif"/>
