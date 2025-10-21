@@ -1,0 +1,15 @@
+module hex_reg8bit(
+	input areset,
+	input clk,
+	input [7:0] data,
+	output reg [7:0] q
+	);
+	
+	always @(posedge clk, negedge areset) begin
+		if(~areset)
+			q <= 8'h00;
+		else
+			q  <= data;
+	end
+
+endmodule

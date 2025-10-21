@@ -1,0 +1,113 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'MAX10_CLK1_50'
+Slack : -4.243
+TNS   : -52.746
+
+Type  : Slow 1200mV 85C Model Setup 'counter_2Hz:comb_3|tog'
+Slack : -0.483
+TNS   : -0.483
+
+Type  : Slow 1200mV 85C Model Setup 'counter_divider:comb_5|dflipflop:dff0|q'
+Slack : 0.298
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'counter_divider:comb_5|dflipflop:dff0|q'
+Slack : 0.393
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'MAX10_CLK1_50'
+Slack : 0.425
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'counter_2Hz:comb_3|tog'
+Slack : 0.573
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'MAX10_CLK1_50'
+Slack : -3.000
+TNS   : -40.881
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'counter_2Hz:comb_3|tog'
+Slack : -1.403
+TNS   : -1.403
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'counter_divider:comb_5|dflipflop:dff0|q'
+Slack : -1.403
+TNS   : -1.403
+
+Type  : Slow 1200mV 0C Model Setup 'MAX10_CLK1_50'
+Slack : -3.873
+TNS   : -45.908
+
+Type  : Slow 1200mV 0C Model Setup 'counter_2Hz:comb_3|tog'
+Slack : -0.392
+TNS   : -0.392
+
+Type  : Slow 1200mV 0C Model Setup 'counter_divider:comb_5|dflipflop:dff0|q'
+Slack : 0.362
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'counter_divider:comb_5|dflipflop:dff0|q'
+Slack : 0.355
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'MAX10_CLK1_50'
+Slack : 0.392
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'counter_2Hz:comb_3|tog'
+Slack : 0.515
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'MAX10_CLK1_50'
+Slack : -3.000
+TNS   : -40.881
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'counter_2Hz:comb_3|tog'
+Slack : -1.403
+TNS   : -1.403
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'counter_divider:comb_5|dflipflop:dff0|q'
+Slack : -1.403
+TNS   : -1.403
+
+Type  : Fast 1200mV 0C Model Setup 'MAX10_CLK1_50'
+Slack : -1.293
+TNS   : -7.365
+
+Type  : Fast 1200mV 0C Model Setup 'counter_2Hz:comb_3|tog'
+Slack : 0.129
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'counter_divider:comb_5|dflipflop:dff0|q'
+Slack : 0.694
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'MAX10_CLK1_50'
+Slack : 0.170
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'counter_divider:comb_5|dflipflop:dff0|q'
+Slack : 0.170
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'counter_2Hz:comb_3|tog'
+Slack : 0.209
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'MAX10_CLK1_50'
+Slack : -3.000
+TNS   : -30.918
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'counter_2Hz:comb_3|tog'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'counter_divider:comb_5|dflipflop:dff0|q'
+Slack : -1.000
+TNS   : -1.000
+
+------------------------------------------------------------

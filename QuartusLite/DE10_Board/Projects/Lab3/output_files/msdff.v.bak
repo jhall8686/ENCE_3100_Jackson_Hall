@@ -1,0 +1,10 @@
+module msdff(
+	input Clk,
+	input D,
+	output Q
+	);
+	wire Qm;
+	dlatch d0(~Clk, D, Qm);
+	dlatch d1(Clk, Qm, Q);
+	
+endmodule

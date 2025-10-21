@@ -1,0 +1,14 @@
+module counter_1s_3bit(
+	input clk,
+	output reg [2:0] count
+	);
+	reg [25:0] count50M;
+	always @(posedge clk) begin
+		count50M <= count50M + 25'b1;
+		if(count50M == 26'd50_000_000) begin
+			count <= count + 3'b1;
+			count50M <= 25'b0;
+		end
+	end
+
+endmodule

@@ -1,0 +1,14 @@
+module petdff(
+	input Clk,
+	input D,
+	output Q
+	);
+	
+	always @(posedge Clk) begin
+		
+		Q <= D;
+		
+	end
+	
+	
+endmodule

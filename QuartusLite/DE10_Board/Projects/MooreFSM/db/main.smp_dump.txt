@@ -1,0 +1,7 @@
+
+State Machine - |main|FSM_Bakery:fsmb0|state
+Name state.LEAVE state.WAIT state.ORDER state.TURN 
+state.TURN 0 0 0 0 
+state.ORDER 0 0 1 1 
+state.WAIT 0 1 0 1 
+state.LEAVE 1 0 0 1 

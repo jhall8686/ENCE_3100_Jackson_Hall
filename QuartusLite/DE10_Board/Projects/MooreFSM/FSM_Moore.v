@@ -1,0 +1,31 @@
+module FSM_Moore(
+	input clk,
+	input rst,
+	input w,
+	output y
+	);
+	
+	reg [1:0] state, next_state;
+	
+	localparam [1:0] A = 2'b00, B = 2'b01, C = 2'b10;
+	
+	always @(posedge clk) begin
+		if(rst)
+			state <= A;
+		else
+			state <= next_state;
+	end
+	
+	always @(*) begin
+	
+		next_state = A;
+		
+		case(state)
+			A: next_state = w ? B : C;
+			B: next_state = w ? A : C;
+			C: next_state = w ? B : C;
+		endcase
+	end
+	
+	assign y = ( state== C);
+endmodule

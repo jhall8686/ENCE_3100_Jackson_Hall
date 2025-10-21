@@ -1,0 +1,8 @@
+
+State Machine - |main|FSM_Patterns:comb_4|state
+Name state.D state.C state.B state.A state.E 
+state.A 0 0 0 0 0 
+state.B 0 0 1 1 0 
+state.C 0 1 0 1 0 
+state.D 1 0 0 1 0 
+state.E 0 0 0 1 1 

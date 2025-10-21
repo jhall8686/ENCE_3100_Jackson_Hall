@@ -1,0 +1,107 @@
+|main
+MAX10_CLK1_50 => MAX10_CLK1_50.IN1
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+SW[3] => SW[3].IN1
+SW[4] => ~NO_FANOUT~
+SW[5] => ~NO_FANOUT~
+SW[6] => SW[6].IN1
+SW[7] => SW[7].IN1
+SW[8] => SW[8].IN1
+SW[9] => SW[9].IN1
+LEDR[0] <= shift_reg:s0.q
+LEDR[1] <= shift_reg:s0.q
+LEDR[2] <= shift_reg:s0.q
+LEDR[3] <= shift_reg:s0.q
+LEDR[4] <= <GND>
+LEDR[5] <= <GND>
+LEDR[6] <= <GND>
+LEDR[7] <= <GND>
+LEDR[8] <= <GND>
+LEDR[9] <= <GND>
+
+
+|main|counter_1s:c0
+clk => flag~reg0.CLK
+clk => c[0].CLK
+clk => c[1].CLK
+clk => c[2].CLK
+clk => c[3].CLK
+clk => c[4].CLK
+clk => c[5].CLK
+clk => c[6].CLK
+clk => c[7].CLK
+clk => c[8].CLK
+clk => c[9].CLK
+clk => c[10].CLK
+clk => c[11].CLK
+clk => c[12].CLK
+clk => c[13].CLK
+clk => c[14].CLK
+clk => c[15].CLK
+clk => c[16].CLK
+clk => c[17].CLK
+clk => c[18].CLK
+clk => c[19].CLK
+clk => c[20].CLK
+clk => c[21].CLK
+clk => c[22].CLK
+clk => c[23].CLK
+clk => c[24].CLK
+reset => c[0].ACLR
+reset => c[1].ACLR
+reset => c[2].ACLR
+reset => c[3].ACLR
+reset => c[4].ACLR
+reset => c[5].ACLR
+reset => c[6].ACLR
+reset => c[7].ACLR
+reset => c[8].ACLR
+reset => c[9].ACLR
+reset => c[10].ACLR
+reset => c[11].ACLR
+reset => c[12].ACLR
+reset => c[13].ACLR
+reset => c[14].ACLR
+reset => c[15].ACLR
+reset => c[16].ACLR
+reset => c[17].ACLR
+reset => c[18].ACLR
+reset => c[19].ACLR
+reset => c[20].ACLR
+reset => c[21].ACLR
+reset => c[22].ACLR
+reset => c[23].ACLR
+reset => c[24].ACLR
+reset => flag~reg0.ENA
+flag <= flag~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|shift_reg:s0
+clk => q[0]~reg0.CLK
+clk => q[1]~reg0.CLK
+clk => q[2]~reg0.CLK
+clk => q[3]~reg0.CLK
+areset => q[0]~reg0.ACLR
+areset => q[1]~reg0.ACLR
+areset => q[2]~reg0.ACLR
+areset => q[3]~reg0.ACLR
+load => q.OUTPUTSELECT
+load => q.OUTPUTSELECT
+load => q.OUTPUTSELECT
+load => q.OUTPUTSELECT
+ena => q.OUTPUTSELECT
+ena => q.OUTPUTSELECT
+ena => q.OUTPUTSELECT
+ena => q.OUTPUTSELECT
+data[0] => q.DATAB
+data[1] => q.DATAB
+data[2] => q.DATAB
+data[3] => q.DATAB
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

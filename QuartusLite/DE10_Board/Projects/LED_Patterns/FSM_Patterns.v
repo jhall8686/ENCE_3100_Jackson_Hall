@@ -1,0 +1,28 @@
+module FSM_Patterns(
+	input w,
+	input clk,
+	input rst,
+	output [2:0] q
+	);
+	reg [2:0] state, next_state;
+	localparam [2:0] A = 3'b000, B = 3'b001, C = 3'b010, D = 3'b011, E = 3'b100; 
+	always @(posedge clk) begin
+		if(rst)
+			state <= A;
+		else
+			state <= next_state;
+	end
+	
+	always @(*) begin
+		case(state)
+			A: next_state = w ? B : E;
+			B: next_state = w ? C : A;
+			C: next_state = w ? D : B;
+			D: next_state = w ? E : C;
+			E: next_state = w ? A : D;
+		endcase
+	end
+	
+	assign q = state;
+	
+endmodule

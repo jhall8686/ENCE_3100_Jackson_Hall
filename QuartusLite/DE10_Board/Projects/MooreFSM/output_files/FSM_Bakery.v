@@ -1,0 +1,39 @@
+module FSM_Bakery(
+	input clk,
+	input rst,
+	input w,
+	output b,
+	output p,
+	output [1:0] s
+	);
+	
+	reg [1:0] state, next_state;
+	
+	localparam [1:0] TURN = 2'b00, ORDER = 2'b01, WAIT = 2'b10, LEAVE = 2'b11;
+	
+	always @(posedge clk) begin
+		if(rst)
+			state <= TURN;
+		else
+			state <= next_state;
+	end
+	
+	always @(*) begin
+		
+		next_state = TURN;
+		
+		case(state)
+			TURN: next_state = w ? ORDER : TURN;
+			ORDER: next_state = w ? WAIT : ORDER;
+			WAIT: next_state = w ? LEAVE : WAIT;
+			LEAVE: next_state = LEAVE;
+			
+		endcase
+		
+	end
+	
+	assign b = (state == ORDER);
+	assign p = (state == WAIT);
+	assign s = state;
+
+endmodule

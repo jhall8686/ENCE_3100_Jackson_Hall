@@ -1,0 +1,11 @@
+module counter_to_7seg(
+	input [15:0] count,
+	output [7:0] seg1,
+	output [7:0] seg10,
+	output [7:0] seg100,
+	output [7:0] seg1000
+	);
+	
+	
+	
+endmodule

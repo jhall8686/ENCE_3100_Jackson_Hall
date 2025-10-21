@@ -1,0 +1,15 @@
+module tff0(
+	input ena,
+	input clk,
+	input clear,
+	output reg Q
+	);
+	wire D;
+	assign D = (~ena & Q) | (ena & ~Q);
+	always @(posedge clk) begin
+		if(~clear)
+			Q <= 1'b0;
+		else
+			Q <= D;
+	end
+endmodule

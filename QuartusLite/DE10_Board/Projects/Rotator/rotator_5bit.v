@@ -1,0 +1,17 @@
+module rotator_5bit(
+    input clk,
+    input load,
+    input [1:0] ena,
+    input [5:0] data,
+    output reg [5:0] q); 
+    always @(posedge clk) begin
+        if(load)
+            q <= data;
+		else begin
+            if(ena == 2'b01)
+                q <= {q[0], q[5:1]};
+            else if(ena == 2'b10)
+                q <= {q[4:0], q[5]};
+        end
+    end
+endmodule

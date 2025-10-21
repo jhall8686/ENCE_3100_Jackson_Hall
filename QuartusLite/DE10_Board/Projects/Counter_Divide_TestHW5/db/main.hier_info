@@ -1,0 +1,109 @@
+|main
+MAX10_CLK1_50 => MAX10_CLK1_50.IN1
+SW[0] => ~NO_FANOUT~
+SW[1] => ~NO_FANOUT~
+SW[2] => ~NO_FANOUT~
+SW[3] => ~NO_FANOUT~
+SW[4] => ~NO_FANOUT~
+SW[5] => ~NO_FANOUT~
+SW[6] => ~NO_FANOUT~
+SW[7] => ~NO_FANOUT~
+SW[8] => ~NO_FANOUT~
+SW[9] => ~NO_FANOUT~
+LEDR[0] <= clk_2Hz.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= counter_divider:comb_5.clk2
+LEDR[2] <= counter_divider:comb_5.clk4
+LEDR[3] <= <GND>
+LEDR[4] <= <GND>
+LEDR[5] <= <GND>
+LEDR[6] <= <GND>
+LEDR[7] <= <GND>
+LEDR[8] <= <GND>
+LEDR[9] <= <GND>
+GPIO[0] <> <UNC>
+GPIO[1] <> <UNC>
+GPIO[2] <> <UNC>
+GPIO[3] <> <UNC>
+GPIO[4] <> <UNC>
+GPIO[5] <> <UNC>
+GPIO[6] <> <UNC>
+GPIO[7] <> <UNC>
+GPIO[8] <> <UNC>
+GPIO[9] <> <UNC>
+GPIO[10] <> <UNC>
+GPIO[11] <> <UNC>
+GPIO[12] <> <UNC>
+GPIO[13] <> <UNC>
+GPIO[14] <> <UNC>
+GPIO[15] <> <UNC>
+GPIO[16] <> <UNC>
+GPIO[17] <> <UNC>
+GPIO[18] <> <UNC>
+GPIO[19] <> <UNC>
+GPIO[20] <> <UNC>
+GPIO[21] <> <UNC>
+GPIO[22] <> <UNC>
+GPIO[23] <> <UNC>
+GPIO[24] <> <UNC>
+GPIO[25] <> <UNC>
+GPIO[26] <> <UNC>
+GPIO[27] <> <UNC>
+GPIO[28] <> <UNC>
+GPIO[29] <> <UNC>
+GPIO[30] <> <UNC>
+GPIO[31] <> <UNC>
+GPIO[32] <> <UNC>
+GPIO[33] <> <UNC>
+GPIO[34] <> <UNC>
+GPIO[35] <> <UNC>
+
+
+|main|counter_2Hz:comb_3
+clk => tog~reg0.CLK
+clk => count50M[0].CLK
+clk => count50M[1].CLK
+clk => count50M[2].CLK
+clk => count50M[3].CLK
+clk => count50M[4].CLK
+clk => count50M[5].CLK
+clk => count50M[6].CLK
+clk => count50M[7].CLK
+clk => count50M[8].CLK
+clk => count50M[9].CLK
+clk => count50M[10].CLK
+clk => count50M[11].CLK
+clk => count50M[12].CLK
+clk => count50M[13].CLK
+clk => count50M[14].CLK
+clk => count50M[15].CLK
+clk => count50M[16].CLK
+clk => count50M[17].CLK
+clk => count50M[18].CLK
+clk => count50M[19].CLK
+clk => count50M[20].CLK
+clk => count50M[21].CLK
+clk => count50M[22].CLK
+clk => count50M[23].CLK
+clk => count50M[24].CLK
+clk => count50M[25].CLK
+tog <= tog~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|counter_divider:comb_5
+clk => clk.IN1
+clk2 <= w_q1.DB_MAX_OUTPUT_PORT_TYPE
+clk4 <= dflipflop:dff1.q
+
+
+|main|counter_divider:comb_5|dflipflop:dff0
+clk => q~reg0.CLK
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|counter_divider:comb_5|dflipflop:dff1
+clk => q~reg0.CLK
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,54 @@
+|main
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+SW[3] => SW[3].IN1
+SW[4] => SW[4].IN1
+SW[5] => SW[5].IN1
+SW[6] => SW[6].IN1
+SW[7] => SW[7].IN1
+SW[8] => SW[8].IN1
+SW[9] => SW[9].IN1
+LEDR[0] <= rotator_5bit:r0.q
+LEDR[1] <= rotator_5bit:r0.q
+LEDR[2] <= rotator_5bit:r0.q
+LEDR[3] <= rotator_5bit:r0.q
+LEDR[4] <= rotator_5bit:r0.q
+LEDR[5] <= rotator_5bit:r0.q
+LEDR[6] <= <GND>
+LEDR[7] <= <GND>
+LEDR[8] <= <GND>
+LEDR[9] <= <GND>
+
+
+|main|rotator_5bit:r0
+clk => q[0]~reg0.CLK
+clk => q[1]~reg0.CLK
+clk => q[2]~reg0.CLK
+clk => q[3]~reg0.CLK
+clk => q[4]~reg0.CLK
+clk => q[5]~reg0.CLK
+load => q.OUTPUTSELECT
+load => q.OUTPUTSELECT
+load => q.OUTPUTSELECT
+load => q.OUTPUTSELECT
+load => q.OUTPUTSELECT
+load => q.OUTPUTSELECT
+ena[0] => Equal0.IN0
+ena[0] => Equal1.IN1
+ena[1] => Equal0.IN1
+ena[1] => Equal1.IN0
+data[0] => q.DATAB
+data[1] => q.DATAB
+data[2] => q.DATAB
+data[3] => q.DATAB
+data[4] => q.DATAB
+data[5] => q.DATAB
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

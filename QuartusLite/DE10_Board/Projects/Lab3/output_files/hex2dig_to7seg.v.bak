@@ -1,0 +1,54 @@
+module hex2dig_to7seg(
+	input [7:0] hex,
+	output reg [6:0] seg1,
+	output reg [6:0] seg2
+	);
+	
+	always @(*) begin
+		case(hex[3:0])
+				4'h0: seg1 = 7'b1111110; // 0
+				4'h1: seg1 = 7'b0110000; // 1
+				4'h2: seg1 = 7'b1101101; // 2
+				4'h3: seg1 = 7'b1111001; // 3
+				4'h4: seg1 = 7'b0110011; // 4
+				4'h5: seg1 = 7'b1011011; // 5
+				4'h6: seg1 = 7'b1011111; // 6
+				4'h7: seg1 = 7'b1110000; // 7
+				4'h8: seg1 = 7'b1111111; // 8
+				4'h9: seg1 = 7'b1111011; // 9
+				4'hA: seg1 = 7'b1110111; // A
+				4'hB: seg1 = 7'b0011111; // b (lowercase)
+				4'hC: seg1 = 7'b1001110; // C
+				4'hD: seg1 = 7'b0111101; // d (lowercase)
+				4'hE: seg1 = 7'b1001111; // E
+				4'hF: seg1 = 7'b1000111; // F
+			default: seg1 = 7'b0000000; // all off (blank)
+		endcase	
+		case(hex[7:4])
+				4'h0: seg2 = 7'b1111110; // 0
+				4'h1: seg2 = 7'b0110000; // 1
+				4'h2: seg2 = 7'b1101101; // 2
+				4'h3: seg2 = 7'b1111001; // 3
+				4'h4: seg2 = 7'b0110011; // 4
+				4'h5: seg2 = 7'b1011011; // 5
+				4'h6: seg2 = 7'b1011111; // 6
+				4'h7: seg2 = 7'b1110000; // 7
+				4'h8: seg2 = 7'b1111111; // 8
+				4'h9: seg2 = 7'b1111011; // 9
+				4'hA: seg2 = 7'b1110111; // A
+				4'hB: seg2 = 7'b0011111; // b (lowercase)
+				4'hC: seg2 = 7'b1001110; // C
+				4'hD: seg2 = 7'b0111101; // d (lowercase)
+				4'hE: seg2 = 7'b1001111; // E
+				4'hF: seg2 = 7'b1000111; // F
+			default: seg2 = 7'b0000000; // all off (blank)
+		endcase
+		
+		//active low, so invert:
+		seg1 = ~seg1;
+		seg2 = ~seg2;
+	end
+	
+
+endmodule
+	

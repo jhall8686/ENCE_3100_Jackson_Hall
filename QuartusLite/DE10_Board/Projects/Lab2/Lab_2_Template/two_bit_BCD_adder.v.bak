@@ -1,0 +1,15 @@
+module two_digit_BCD_adder(
+	input[3:0] a0,
+	input[3:0] a1,
+	input[3:0] b0,
+	input[3:0] b1,
+	output[7:0] seg1,
+	output[7:0] seg2,
+	output[7:0] seg3
+	);
+	
+	adder_4bit(
+	
+endmodule
+	
+	

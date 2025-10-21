@@ -1,0 +1,16 @@
+module counter_a(
+	input ena,
+	input clk,
+	input clear,
+	output reg [15:0] q
+	);
+	
+	always @(posedge clk) begin
+		if(~clear)
+			q <= 16'h0;
+		else if(ena)
+				q <= q + 16'h1;
+	end
+	
+	
+endmodule

@@ -1,0 +1,29 @@
+module counter_1ms(
+	input ena,
+	input clk,
+	input reset,
+	output reg toggle,
+	output reg [15:0] count
+	);
+	reg [25:0] count50;
+	
+	always @(posedge clk) begin
+		if(reset) begin
+			count50 <= 0;
+			count <= 0;
+		end
+		else begin
+			if(ena) begin
+				count50 <= count50 + 1;
+				if(count50 == 26'd50_000_000)
+					toggle = ~toggle;
+					count <= count + 1;
+			end
+		end
+	end
+	
+	
+	
+endmodule
+
+	

@@ -1,0 +1,8 @@
+module BCD_decoder(
+	input [3:0] count,
+
+	);
+	
+	
+	
+endmodule

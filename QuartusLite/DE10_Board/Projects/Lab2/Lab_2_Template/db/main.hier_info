@@ -1,0 +1,486 @@
+|main
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+SW[3] => SW[3].IN1
+SW[4] => SW[4].IN1
+SW[5] => SW[5].IN1
+SW[6] => SW[6].IN1
+SW[7] => SW[7].IN1
+SW[8] => SW[8].IN1
+SW[9] => ~NO_FANOUT~
+LEDR[0] <= <GND>
+LEDR[1] <= <GND>
+LEDR[2] <= <GND>
+LEDR[3] <= <GND>
+LEDR[4] <= <GND>
+LEDR[5] <= <GND>
+LEDR[6] <= <GND>
+LEDR[7] <= <GND>
+LEDR[8] <= <GND>
+LEDR[9] <= <GND>
+HEX0[0] <= two_digit_BCD_adder:td.port5
+HEX0[1] <= two_digit_BCD_adder:td.port5
+HEX0[2] <= two_digit_BCD_adder:td.port5
+HEX0[3] <= two_digit_BCD_adder:td.port5
+HEX0[4] <= two_digit_BCD_adder:td.port5
+HEX0[5] <= two_digit_BCD_adder:td.port5
+HEX0[6] <= two_digit_BCD_adder:td.port5
+HEX0[7] <= two_digit_BCD_adder:td.port5
+HEX1[0] <= two_digit_BCD_adder:td.port6
+HEX1[1] <= two_digit_BCD_adder:td.port6
+HEX1[2] <= two_digit_BCD_adder:td.port6
+HEX1[3] <= two_digit_BCD_adder:td.port6
+HEX1[4] <= two_digit_BCD_adder:td.port6
+HEX1[5] <= two_digit_BCD_adder:td.port6
+HEX1[6] <= two_digit_BCD_adder:td.port6
+HEX1[7] <= two_digit_BCD_adder:td.port6
+HEX2[0] <= two_digit_BCD_adder:td.port7
+HEX2[1] <= two_digit_BCD_adder:td.port7
+HEX2[2] <= two_digit_BCD_adder:td.port7
+HEX2[3] <= two_digit_BCD_adder:td.port7
+HEX2[4] <= two_digit_BCD_adder:td.port7
+HEX2[5] <= two_digit_BCD_adder:td.port7
+HEX2[6] <= two_digit_BCD_adder:td.port7
+HEX2[7] <= two_digit_BCD_adder:td.port7
+HEX3[0] <= <GND>
+HEX3[1] <= <GND>
+HEX3[2] <= <GND>
+HEX3[3] <= <GND>
+HEX3[4] <= <GND>
+HEX3[5] <= <GND>
+HEX3[6] <= <GND>
+HEX3[7] <= <GND>
+
+
+|main|two_digit_BCD_adder:td
+a0[0] => a0[0].IN1
+a0[1] => a0[1].IN1
+a0[2] => a0[2].IN1
+a0[3] => a0[3].IN1
+a1[0] => a1[0].IN1
+a1[1] => a1[1].IN1
+a1[2] => a1[2].IN1
+a1[3] => a1[3].IN1
+b0[0] => b0[0].IN1
+b0[1] => b0[1].IN1
+b0[2] => b0[2].IN1
+b0[3] => b0[3].IN1
+b1[0] => b1[0].IN1
+b1[1] => b1[1].IN1
+b1[2] => b1[2].IN1
+b1[3] => b1[3].IN1
+cin => cin.IN1
+seg0[0] <= bcd_to_7seg:b2s0.port4
+seg0[1] <= bcd_to_7seg:b2s0.port4
+seg0[2] <= bcd_to_7seg:b2s0.port4
+seg0[3] <= bcd_to_7seg:b2s0.port4
+seg0[4] <= bcd_to_7seg:b2s0.port4
+seg0[5] <= bcd_to_7seg:b2s0.port4
+seg0[6] <= bcd_to_7seg:b2s0.port4
+seg0[7] <= bcd_to_7seg:b2s0.port4
+seg1[0] <= bcd_to_7seg:b2s1.port4
+seg1[1] <= bcd_to_7seg:b2s1.port4
+seg1[2] <= bcd_to_7seg:b2s1.port4
+seg1[3] <= bcd_to_7seg:b2s1.port4
+seg1[4] <= bcd_to_7seg:b2s1.port4
+seg1[5] <= bcd_to_7seg:b2s1.port4
+seg1[6] <= bcd_to_7seg:b2s1.port4
+seg1[7] <= bcd_to_7seg:b2s1.port4
+seg2[0] <= circuit_B:circB0.port1
+seg2[1] <= circuit_B:circB0.port1
+seg2[2] <= circuit_B:circB0.port1
+seg2[3] <= circuit_B:circB0.port1
+seg2[4] <= circuit_B:circB0.port1
+seg2[5] <= circuit_B:circB0.port1
+seg2[6] <= circuit_B:circB0.port1
+seg2[7] <= circuit_B:circB0.port1
+
+
+|main|two_digit_BCD_adder:td|adder_4bit:add0
+i_a[0] => i_a[0].IN1
+i_a[1] => i_a[1].IN1
+i_a[2] => i_a[2].IN1
+i_a[3] => i_a[3].IN1
+i_b[0] => i_b[0].IN1
+i_b[1] => i_b[1].IN1
+i_b[2] => i_b[2].IN1
+i_b[3] => i_b[3].IN1
+i_cin => i_cin.IN1
+o_cout <= FA:fa3.port3
+o_s[0] <= FA:fa0.port4
+o_s[1] <= FA:fa1.port4
+o_s[2] <= FA:fa2.port4
+o_s[3] <= FA:fa3.port4
+
+
+|main|two_digit_BCD_adder:td|adder_4bit:add0|FA:fa0
+i_a => w1.IN0
+i_b => i_b.IN1
+i_cin => i_cin.IN1
+o_cout <= mux_2_1_1bit:m0.port3
+o_s <= o_s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|two_digit_BCD_adder:td|adder_4bit:add0|FA:fa0|mux_2_1_1bit:m0
+i_a => o_m.IN0
+i_b => o_m.IN0
+i_sel => o_m.IN1
+i_sel => o_m.IN1
+o_m <= o_m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|two_digit_BCD_adder:td|adder_4bit:add0|FA:fa1
+i_a => w1.IN0
+i_b => i_b.IN1
+i_cin => i_cin.IN1
+o_cout <= mux_2_1_1bit:m0.port3
+o_s <= o_s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|two_digit_BCD_adder:td|adder_4bit:add0|FA:fa1|mux_2_1_1bit:m0
+i_a => o_m.IN0
+i_b => o_m.IN0
+i_sel => o_m.IN1
+i_sel => o_m.IN1
+o_m <= o_m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|two_digit_BCD_adder:td|adder_4bit:add0|FA:fa2
+i_a => w1.IN0
+i_b => i_b.IN1
+i_cin => i_cin.IN1
+o_cout <= mux_2_1_1bit:m0.port3
+o_s <= o_s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|two_digit_BCD_adder:td|adder_4bit:add0|FA:fa2|mux_2_1_1bit:m0
+i_a => o_m.IN0
+i_b => o_m.IN0
+i_sel => o_m.IN1
+i_sel => o_m.IN1
+o_m <= o_m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|two_digit_BCD_adder:td|adder_4bit:add0|FA:fa3
+i_a => w1.IN0
+i_b => i_b.IN1
+i_cin => i_cin.IN1
+o_cout <= mux_2_1_1bit:m0.port3
+o_s <= o_s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|two_digit_BCD_adder:td|adder_4bit:add0|FA:fa3|mux_2_1_1bit:m0
+i_a => o_m.IN0
+i_b => o_m.IN0
+i_sel => o_m.IN1
+i_sel => o_m.IN1
+o_m <= o_m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|two_digit_BCD_adder:td|bin_to_dec_v3:b2d0
+i_v3 => i_v3.IN3
+i_v2 => i_v2.IN3
+i_v1 => i_v1.IN3
+i_v0 => i_v0.IN3
+i_cin => i_cin.IN1
+o_a3 <= mux_2_1_1bit:mux3.port3
+o_a2 <= mux_2_1_1bit:mux2.port3
+o_a1 <= mux_2_1_1bit:mux1.port3
+o_a0 <= mux_2_1_1bit:mux0.port3
+o_z <= w_z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|two_digit_BCD_adder:td|bin_to_dec_v3:b2d0|comparator:comp0
+i_v3 => o_z.IN0
+i_v3 => o_z.IN0
+i_v2 => o_z.IN1
+i_v1 => o_z.IN1
+i_v0 => ~NO_FANOUT~
+o_z <= o_z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|two_digit_BCD_adder:td|bin_to_dec_v3:b2d0|circuit_A_v2:circA
+i_cout => o_a3.IN0
+i_cout => o_a3.IN0
+i_v3 => o_a3.IN0
+i_v2 => o_a3.IN1
+i_v2 => o_a2.IN0
+i_v2 => o_a2.IN0
+i_v1 => o_a3.IN1
+i_v1 => o_a3.IN1
+i_v1 => o_a3.IN1
+i_v1 => o_a2.IN1
+i_v1 => o_a2.IN1
+i_v1 => o_a1.DATAIN
+i_v0 => o_a3.IN1
+i_v0 => o_a0.DATAIN
+o_a0 <= i_v0.DB_MAX_OUTPUT_PORT_TYPE
+o_a1 <= i_v1.DB_MAX_OUTPUT_PORT_TYPE
+o_a2 <= o_a2.DB_MAX_OUTPUT_PORT_TYPE
+o_a3 <= o_a3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|two_digit_BCD_adder:td|bin_to_dec_v3:b2d0|mux_2_1_1bit:mux3
+i_a => o_m.IN0
+i_b => o_m.IN0
+i_sel => o_m.IN1
+i_sel => o_m.IN1
+o_m <= o_m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|two_digit_BCD_adder:td|bin_to_dec_v3:b2d0|mux_2_1_1bit:mux2
+i_a => o_m.IN0
+i_b => o_m.IN0
+i_sel => o_m.IN1
+i_sel => o_m.IN1
+o_m <= o_m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|two_digit_BCD_adder:td|bin_to_dec_v3:b2d0|mux_2_1_1bit:mux1
+i_a => o_m.IN0
+i_b => o_m.IN0
+i_sel => o_m.IN1
+i_sel => o_m.IN1
+o_m <= o_m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|two_digit_BCD_adder:td|bin_to_dec_v3:b2d0|mux_2_1_1bit:mux0
+i_a => o_m.IN0
+i_b => o_m.IN0
+i_sel => o_m.IN1
+i_sel => o_m.IN1
+o_m <= o_m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|two_digit_BCD_adder:td|bcd_to_7seg:b2s0
+c3 => m.IN0
+c2 => m.IN0
+c2 => m.IN0
+c2 => m.IN1
+c2 => m.IN0
+c1 => m.IN1
+c1 => m.IN0
+c1 => m.IN1
+c1 => m.IN1
+c1 => m.IN1
+c0 => m.IN1
+c0 => m.IN1
+c0 => m.IN1
+c0 => m.IN1
+c0 => m.IN1
+c0 => m.IN1
+c0 => m.IN1
+c0 => m.IN1
+c0 => m.IN1
+m[0] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[1] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[2] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[3] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[4] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[5] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[6] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[7] <= <VCC>
+
+
+|main|two_digit_BCD_adder:td|adder_4bit:add1
+i_a[0] => i_a[0].IN1
+i_a[1] => i_a[1].IN1
+i_a[2] => i_a[2].IN1
+i_a[3] => i_a[3].IN1
+i_b[0] => i_b[0].IN1
+i_b[1] => i_b[1].IN1
+i_b[2] => i_b[2].IN1
+i_b[3] => i_b[3].IN1
+i_cin => i_cin.IN1
+o_cout <= FA:fa3.port3
+o_s[0] <= FA:fa0.port4
+o_s[1] <= FA:fa1.port4
+o_s[2] <= FA:fa2.port4
+o_s[3] <= FA:fa3.port4
+
+
+|main|two_digit_BCD_adder:td|adder_4bit:add1|FA:fa0
+i_a => w1.IN0
+i_b => i_b.IN1
+i_cin => i_cin.IN1
+o_cout <= mux_2_1_1bit:m0.port3
+o_s <= o_s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|two_digit_BCD_adder:td|adder_4bit:add1|FA:fa0|mux_2_1_1bit:m0
+i_a => o_m.IN0
+i_b => o_m.IN0
+i_sel => o_m.IN1
+i_sel => o_m.IN1
+o_m <= o_m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|two_digit_BCD_adder:td|adder_4bit:add1|FA:fa1
+i_a => w1.IN0
+i_b => i_b.IN1
+i_cin => i_cin.IN1
+o_cout <= mux_2_1_1bit:m0.port3
+o_s <= o_s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|two_digit_BCD_adder:td|adder_4bit:add1|FA:fa1|mux_2_1_1bit:m0
+i_a => o_m.IN0
+i_b => o_m.IN0
+i_sel => o_m.IN1
+i_sel => o_m.IN1
+o_m <= o_m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|two_digit_BCD_adder:td|adder_4bit:add1|FA:fa2
+i_a => w1.IN0
+i_b => i_b.IN1
+i_cin => i_cin.IN1
+o_cout <= mux_2_1_1bit:m0.port3
+o_s <= o_s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|two_digit_BCD_adder:td|adder_4bit:add1|FA:fa2|mux_2_1_1bit:m0
+i_a => o_m.IN0
+i_b => o_m.IN0
+i_sel => o_m.IN1
+i_sel => o_m.IN1
+o_m <= o_m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|two_digit_BCD_adder:td|adder_4bit:add1|FA:fa3
+i_a => w1.IN0
+i_b => i_b.IN1
+i_cin => i_cin.IN1
+o_cout <= mux_2_1_1bit:m0.port3
+o_s <= o_s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|two_digit_BCD_adder:td|adder_4bit:add1|FA:fa3|mux_2_1_1bit:m0
+i_a => o_m.IN0
+i_b => o_m.IN0
+i_sel => o_m.IN1
+i_sel => o_m.IN1
+o_m <= o_m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|two_digit_BCD_adder:td|bin_to_dec_v3:b2d1
+i_v3 => i_v3.IN3
+i_v2 => i_v2.IN3
+i_v1 => i_v1.IN3
+i_v0 => i_v0.IN3
+i_cin => i_cin.IN1
+o_a3 <= mux_2_1_1bit:mux3.port3
+o_a2 <= mux_2_1_1bit:mux2.port3
+o_a1 <= mux_2_1_1bit:mux1.port3
+o_a0 <= mux_2_1_1bit:mux0.port3
+o_z <= w_z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|two_digit_BCD_adder:td|bin_to_dec_v3:b2d1|comparator:comp0
+i_v3 => o_z.IN0
+i_v3 => o_z.IN0
+i_v2 => o_z.IN1
+i_v1 => o_z.IN1
+i_v0 => ~NO_FANOUT~
+o_z <= o_z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|two_digit_BCD_adder:td|bin_to_dec_v3:b2d1|circuit_A_v2:circA
+i_cout => o_a3.IN0
+i_cout => o_a3.IN0
+i_v3 => o_a3.IN0
+i_v2 => o_a3.IN1
+i_v2 => o_a2.IN0
+i_v2 => o_a2.IN0
+i_v1 => o_a3.IN1
+i_v1 => o_a3.IN1
+i_v1 => o_a3.IN1
+i_v1 => o_a2.IN1
+i_v1 => o_a2.IN1
+i_v1 => o_a1.DATAIN
+i_v0 => o_a3.IN1
+i_v0 => o_a0.DATAIN
+o_a0 <= i_v0.DB_MAX_OUTPUT_PORT_TYPE
+o_a1 <= i_v1.DB_MAX_OUTPUT_PORT_TYPE
+o_a2 <= o_a2.DB_MAX_OUTPUT_PORT_TYPE
+o_a3 <= o_a3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|two_digit_BCD_adder:td|bin_to_dec_v3:b2d1|mux_2_1_1bit:mux3
+i_a => o_m.IN0
+i_b => o_m.IN0
+i_sel => o_m.IN1
+i_sel => o_m.IN1
+o_m <= o_m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|two_digit_BCD_adder:td|bin_to_dec_v3:b2d1|mux_2_1_1bit:mux2
+i_a => o_m.IN0
+i_b => o_m.IN0
+i_sel => o_m.IN1
+i_sel => o_m.IN1
+o_m <= o_m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|two_digit_BCD_adder:td|bin_to_dec_v3:b2d1|mux_2_1_1bit:mux1
+i_a => o_m.IN0
+i_b => o_m.IN0
+i_sel => o_m.IN1
+i_sel => o_m.IN1
+o_m <= o_m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|two_digit_BCD_adder:td|bin_to_dec_v3:b2d1|mux_2_1_1bit:mux0
+i_a => o_m.IN0
+i_b => o_m.IN0
+i_sel => o_m.IN1
+i_sel => o_m.IN1
+o_m <= o_m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|two_digit_BCD_adder:td|bcd_to_7seg:b2s1
+c3 => m.IN0
+c2 => m.IN0
+c2 => m.IN0
+c2 => m.IN1
+c2 => m.IN0
+c1 => m.IN1
+c1 => m.IN0
+c1 => m.IN1
+c1 => m.IN1
+c1 => m.IN1
+c0 => m.IN1
+c0 => m.IN1
+c0 => m.IN1
+c0 => m.IN1
+c0 => m.IN1
+c0 => m.IN1
+c0 => m.IN1
+c0 => m.IN1
+c0 => m.IN1
+m[0] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[1] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[2] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[3] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[4] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[5] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[6] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[7] <= <VCC>
+
+
+|main|two_digit_BCD_adder:td|circuit_B:circB0
+i_z => o_seg[5].DATAIN
+i_z => o_seg[0].DATAIN
+i_z => o_seg[3].DATAIN
+i_z => o_seg[4].DATAIN
+o_seg[0] <= i_z.DB_MAX_OUTPUT_PORT_TYPE
+o_seg[1] <= <GND>
+o_seg[2] <= <GND>
+o_seg[3] <= i_z.DB_MAX_OUTPUT_PORT_TYPE
+o_seg[4] <= i_z.DB_MAX_OUTPUT_PORT_TYPE
+o_seg[5] <= i_z.DB_MAX_OUTPUT_PORT_TYPE
+o_seg[6] <= <VCC>
+o_seg[7] <= <VCC>
+
+
