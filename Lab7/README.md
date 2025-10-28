@@ -48,4 +48,5 @@ The `counter_3s` module takes the `counter_start` signal as an input to begin it
 
 This is what the code looks like after being uploaded to the DE10 and connected to a PC with Realterm running.
 
+<img src="board_rec_hello.gif" width = "700"/>
 
