@@ -1,0 +1,18 @@
+
+State Machine - |main|FSM_Word_Detector:fsm0|prev_state
+Name prev_state.O prev_state.L2 prev_state.L prev_state.E prev_state.H prev_state.A 
+prev_state.A 0 0 0 0 0 0 
+prev_state.H 0 0 0 0 1 1 
+prev_state.E 0 0 0 1 0 1 
+prev_state.L 0 0 1 0 0 1 
+prev_state.L2 0 1 0 0 0 1 
+prev_state.O 1 0 0 0 0 1 
+
+State Machine - |main|FSM_Word_Detector:fsm0|state
+Name state.O state.L2 state.L state.E state.H state.A 
+state.A 0 0 0 0 0 0 
+state.H 0 0 0 0 1 1 
+state.E 0 0 0 1 0 1 
+state.L 0 0 1 0 0 1 
+state.L2 0 1 0 0 0 1 
+state.O 1 0 0 0 0 1 
