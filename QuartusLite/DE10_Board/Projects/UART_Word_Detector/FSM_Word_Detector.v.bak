@@ -1,0 +1,40 @@
+module FSM_HW(
+	input rst,
+	input clk,
+	input w,
+	output reg z
+	);
+	
+	reg [2:0] state, next_state;
+	localparam [2:0] S1 = 3'd0, S2 = 3'd1, S3a = 3'd2, S3b = 3'd3, 
+						 S4a = 3'd4, S4b = 3'd5, S5a = 3'd6, S5b = 3'd7;
+	
+	always @(posedge clk) begin
+		if(rst)
+			state <= S1;
+		else
+			state <= next_state;
+	end
+	//next state logic
+	always @(*) begin
+		case(state)
+			S1: next_state = w ? S2 : S1;
+			S2: next_state = w ? S3a : S3b;
+			S3a: next_state = w ? S4a : S3b;
+			S3b: next_state = w ? S2 : S4b;
+			S4a: next_state = w ? S5a : S3b;
+			S4b: next_state = w ? S5b : S1;
+			S5a: next_state = w ? S5a : S3b;
+			S5b: next_state = w ? S3a : S3b;
+		endcase
+	end
+	
+	//output logic
+	
+	always @(*) begin
+		if(state == S5a || state == S5b)
+			z = 1'b1;
+		else
+			z = 1'b0;
+	end
+endmodule
