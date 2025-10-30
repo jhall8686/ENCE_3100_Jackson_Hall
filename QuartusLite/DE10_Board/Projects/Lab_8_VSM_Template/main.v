@@ -10,13 +10,17 @@ module main(
 	output	[7:0]		HEX0,
 	output	[7:0]		HEX1,
 	output	[7:0]		HEX2,
+<<<<<<< HEAD
 	output	[7:0]		HEX3,
+=======
+>>>>>>> 0fc0b0d6320d78bf222e50deac36bce788930f7e
 	output	[7:0]		HEX4,
 	output	[7:0]		HEX5
 );
 
 	localparam N = 4;
 
+<<<<<<< HEAD
 
 
 
@@ -26,6 +30,11 @@ module main(
 	counter_1s(.clk(MAX10_CLK1_50), .en(SW[9]), .clk_1s(w_clock));
 	assign LEDR[7] = w_clock;
 	
+=======
+	// User Wires
+	// ------------------------------
+	wire w_clock = SW[9];
+>>>>>>> 0fc0b0d6320d78bf222e50deac36bce788930f7e
 	wire w_reset = SW[8];
 	
 	wire [N-1:0] w_user_input = SW[3:0];
@@ -121,11 +130,14 @@ module main(
 		.IB_BUS(w_IB_BUS)
 	);
 	
+<<<<<<< HEAD
 	seg7Decoder SEG3(
 		.i_bin(w_counter),
 		.o_HEX(HEX3)
 	);
 	
+=======
+>>>>>>> 0fc0b0d6320d78bf222e50deac36bce788930f7e
 	seg7Decoder SEG4(
 		.i_bin(w_user_input),
 		.o_HEX(HEX4)

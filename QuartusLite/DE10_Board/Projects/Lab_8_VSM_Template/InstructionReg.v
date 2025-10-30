@@ -16,7 +16,11 @@ module InstructionReg #
 	output [N-1:0] IB_BUS
 );
 
+<<<<<<< HEAD
 	reg [N-1:0] w_Data;
+=======
+	reg [3:0] w_Data;
+>>>>>>> 0fc0b0d6320d78bf222e50deac36bce788930f7e
 	always @(posedge MainClock) begin
 		if(ClearInstr)
 			ToInstr <= {N{1'b0}};

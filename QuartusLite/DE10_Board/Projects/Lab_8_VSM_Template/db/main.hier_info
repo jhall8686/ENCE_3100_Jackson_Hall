@@ -1,5 +1,9 @@
 |main
+<<<<<<< HEAD
 MAX10_CLK1_50 => MAX10_CLK1_50.IN1
+=======
+MAX10_CLK1_50 => ~NO_FANOUT~
+>>>>>>> 0fc0b0d6320d78bf222e50deac36bce788930f7e
 KEY[0] => ~NO_FANOUT~
 KEY[1] => ~NO_FANOUT~
 SW[0] => w_user_input[0].IN2
@@ -11,7 +15,11 @@ SW[5] => ~NO_FANOUT~
 SW[6] => ~NO_FANOUT~
 SW[7] => ~NO_FANOUT~
 SW[8] => w_reset.IN6
+<<<<<<< HEAD
 SW[9] => SW[9].IN1
+=======
+SW[9] => w_clock.IN6
+>>>>>>> 0fc0b0d6320d78bf222e50deac36bce788930f7e
 GPIO[0] <> <UNC>
 GPIO[1] <> <UNC>
 GPIO[2] <> <UNC>
@@ -48,6 +56,7 @@ GPIO[32] <> <UNC>
 GPIO[33] <> <UNC>
 GPIO[34] <> <UNC>
 GPIO[35] <> <UNC>
+<<<<<<< HEAD
 LEDR[0] <= w_rOut[0].DB_MAX_OUTPUT_PORT_TYPE
 LEDR[1] <= w_rOut[1].DB_MAX_OUTPUT_PORT_TYPE
 LEDR[2] <= w_rOut[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -165,6 +174,58 @@ en => count.OUTPUTSELECT
 en => count.OUTPUTSELECT
 en => count.OUTPUTSELECT
 clk_1s <= clk_1s~reg0.DB_MAX_OUTPUT_PORT_TYPE
+=======
+LEDR[0] << w_rOut[0].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] << w_rOut[1].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] << w_rOut[2].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[3] << w_rOut[3].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[4] << <GND>
+LEDR[5] << <GND>
+LEDR[6] << <GND>
+LEDR[7] << <GND>
+LEDR[8] << <GND>
+LEDR[9] << Arithmetic_Unit:ALU.Carry
+HEX0[0] << seg7Decoder:SEG0.o_HEX
+HEX0[1] << seg7Decoder:SEG0.o_HEX
+HEX0[2] << seg7Decoder:SEG0.o_HEX
+HEX0[3] << seg7Decoder:SEG0.o_HEX
+HEX0[4] << seg7Decoder:SEG0.o_HEX
+HEX0[5] << seg7Decoder:SEG0.o_HEX
+HEX0[6] << seg7Decoder:SEG0.o_HEX
+HEX0[7] << seg7Decoder:SEG0.o_HEX
+HEX1[0] << seg7Decoder:SEG1.o_HEX
+HEX1[1] << seg7Decoder:SEG1.o_HEX
+HEX1[2] << seg7Decoder:SEG1.o_HEX
+HEX1[3] << seg7Decoder:SEG1.o_HEX
+HEX1[4] << seg7Decoder:SEG1.o_HEX
+HEX1[5] << seg7Decoder:SEG1.o_HEX
+HEX1[6] << seg7Decoder:SEG1.o_HEX
+HEX1[7] << seg7Decoder:SEG1.o_HEX
+HEX2[0] << seg7Decoder:SEG2.o_HEX
+HEX2[1] << seg7Decoder:SEG2.o_HEX
+HEX2[2] << seg7Decoder:SEG2.o_HEX
+HEX2[3] << seg7Decoder:SEG2.o_HEX
+HEX2[4] << seg7Decoder:SEG2.o_HEX
+HEX2[5] << seg7Decoder:SEG2.o_HEX
+HEX2[6] << seg7Decoder:SEG2.o_HEX
+HEX2[7] << seg7Decoder:SEG2.o_HEX
+HEX4[0] << seg7Decoder:SEG4.o_HEX
+HEX4[1] << seg7Decoder:SEG4.o_HEX
+HEX4[2] << seg7Decoder:SEG4.o_HEX
+HEX4[3] << seg7Decoder:SEG4.o_HEX
+HEX4[4] << seg7Decoder:SEG4.o_HEX
+HEX4[5] << seg7Decoder:SEG4.o_HEX
+HEX4[6] << seg7Decoder:SEG4.o_HEX
+HEX4[7] << seg7Decoder:SEG4.o_HEX
+HEX5[0] << seg7Decoder:SEG5.o_HEX
+HEX5[1] << seg7Decoder:SEG5.o_HEX
+HEX5[2] << seg7Decoder:SEG5.o_HEX
+HEX5[3] << seg7Decoder:SEG5.o_HEX
+HEX5[4] << seg7Decoder:SEG5.o_HEX
+HEX5[5] << seg7Decoder:SEG5.o_HEX
+HEX5[6] << seg7Decoder:SEG5.o_HEX
+HEX5[7] << seg7Decoder:SEG5.o_HEX
+>>>>>>> 0fc0b0d6320d78bf222e50deac36bce788930f7e
 
 
 |main|Accumulator_A:AccA
@@ -314,6 +375,7 @@ IB_BUS[2] <= IB_BUS[2].DB_MAX_OUTPUT_PORT_TYPE
 IB_BUS[3] <= IB_BUS[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
+<<<<<<< HEAD
 |main|seg7Decoder:SEG3
 i_bin[0] => Decoder0.IN3
 i_bin[1] => Decoder0.IN2
@@ -329,6 +391,8 @@ o_HEX[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 o_HEX[7] <= <VCC>
 
 
+=======
+>>>>>>> 0fc0b0d6320d78bf222e50deac36bce788930f7e
 |main|seg7Decoder:SEG4
 i_bin[0] => Decoder0.IN3
 i_bin[1] => Decoder0.IN2

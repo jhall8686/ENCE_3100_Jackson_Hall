@@ -1,5 +1,9 @@
 Assembler report for main
+<<<<<<< HEAD
 Wed Oct 29 23:07:10 2025
+=======
+Tue Oct 28 14:01:23 2025
+>>>>>>> 0fc0b0d6320d78bf222e50deac36bce788930f7e
 Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 
 
@@ -38,7 +42,11 @@ on the Quartus Prime software download page.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
+<<<<<<< HEAD
 ; Assembler Status      ; Successful - Wed Oct 29 23:07:10 2025 ;
+=======
+; Assembler Status      ; Successful - Tue Oct 28 14:01:23 2025 ;
+>>>>>>> 0fc0b0d6320d78bf222e50deac36bce788930f7e
 ; Revision Name         ; main                                  ;
 ; Top-level Entity Name ; main                                  ;
 ; Family                ; MAX 10                                ;
@@ -67,8 +75,13 @@ on the Quartus Prime software download page.
 +----------------+----------------------------------------------------------------------------------------------------------------------------------------+
 ; Option         ; Setting                                                                                                                                ;
 +----------------+----------------------------------------------------------------------------------------------------------------------------------------+
+<<<<<<< HEAD
 ; JTAG usercode  ; 0x0028B671                                                                                                                             ;
 ; Checksum       ; 0x0028B671                                                                                                                             ;
+=======
+; JTAG usercode  ; 0x0028173A                                                                                                                             ;
+; Checksum       ; 0x0028173A                                                                                                                             ;
+>>>>>>> 0fc0b0d6320d78bf222e50deac36bce788930f7e
 +----------------+----------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -78,15 +91,25 @@ on the Quartus Prime software download page.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+<<<<<<< HEAD
     Info: Processing started: Wed Oct 29 23:07:06 2025
+=======
+    Info: Processing started: Tue Oct 28 14:01:19 2025
+>>>>>>> 0fc0b0d6320d78bf222e50deac36bce788930f7e
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off main -c main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4828 megabytes
+<<<<<<< HEAD
     Info: Processing ended: Wed Oct 29 23:07:10 2025
     Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:04
+=======
+    Info: Processing ended: Tue Oct 28 14:01:23 2025
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03
+>>>>>>> 0fc0b0d6320d78bf222e50deac36bce788930f7e
 
 

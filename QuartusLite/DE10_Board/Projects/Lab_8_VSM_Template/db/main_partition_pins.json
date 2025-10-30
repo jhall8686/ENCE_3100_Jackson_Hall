@@ -20,10 +20,13 @@
 					"strict" : false
 				},
 				{
+<<<<<<< HEAD
 					"name" : "LEDR[7]",
 					"strict" : false
 				},
 				{
+=======
+>>>>>>> 0fc0b0d6320d78bf222e50deac36bce788930f7e
 					"name" : "LEDR[9]",
 					"strict" : false
 				},
@@ -112,6 +115,7 @@
 					"strict" : false
 				},
 				{
+<<<<<<< HEAD
 					"name" : "HEX3[0]",
 					"strict" : false
 				},
@@ -140,6 +144,8 @@
 					"strict" : false
 				},
 				{
+=======
+>>>>>>> 0fc0b0d6320d78bf222e50deac36bce788930f7e
 					"name" : "HEX4[0]",
 					"strict" : false
 				},
@@ -216,10 +222,13 @@
 					"strict" : false
 				},
 				{
+<<<<<<< HEAD
 					"name" : "MAX10_CLK1_50",
 					"strict" : false
 				},
 				{
+=======
+>>>>>>> 0fc0b0d6320d78bf222e50deac36bce788930f7e
 					"name" : "SW[9]",
 					"strict" : false
 				}

@@ -1,5 +1,9 @@
 Analysis & Synthesis report for main
+<<<<<<< HEAD
 Wed Oct 29 23:06:28 2025
+=======
+Tue Oct 28 14:01:05 2025
+>>>>>>> 0fc0b0d6320d78bf222e50deac36bce788930f7e
 Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 
 
@@ -26,9 +30,16 @@ Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
  18. Parameter Settings for User Entity Instance: ProgramCounter:ProgCounter
  19. Parameter Settings for User Entity Instance: ROM_Nx8:ROM
  20. Parameter Settings for User Entity Instance: FSM_MicroInstr:Controller
+<<<<<<< HEAD
  21. Post-Synthesis Netlist Statistics for Top Partition
  22. Elapsed Time Per Partition
  23. Analysis & Synthesis Messages
+=======
+ 21. Port Connectivity Checks: "ProgramCounter:ProgCounter"
+ 22. Post-Synthesis Netlist Statistics for Top Partition
+ 23. Elapsed Time Per Partition
+ 24. Analysis & Synthesis Messages
+>>>>>>> 0fc0b0d6320d78bf222e50deac36bce788930f7e
 
 
 
@@ -55,16 +66,28 @@ on the Quartus Prime software download page.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
+<<<<<<< HEAD
 ; Analysis & Synthesis Status        ; Successful - Wed Oct 29 23:06:28 2025           ;
+=======
+; Analysis & Synthesis Status        ; Successful - Tue Oct 28 14:01:05 2025           ;
+>>>>>>> 0fc0b0d6320d78bf222e50deac36bce788930f7e
 ; Quartus Prime Version              ; 24.1std.0 Build 1077 03/04/2025 SC Lite Edition ;
 ; Revision Name                      ; main                                            ;
 ; Top-level Entity Name              ; main                                            ;
 ; Family                             ; MAX 10                                          ;
+<<<<<<< HEAD
 ; Total logic elements               ; 165                                             ;
 ;     Total combinational functions  ; 157                                             ;
 ;     Dedicated logic registers      ; 56                                              ;
 ; Total registers                    ; 56                                              ;
 ; Total pins                         ; 107                                             ;
+=======
+; Total logic elements               ; 91                                              ;
+;     Total combinational functions  ; 83                                              ;
+;     Dedicated logic registers      ; 27                                              ;
+; Total registers                    ; 27                                              ;
+; Total pins                         ; 99                                              ;
+>>>>>>> 0fc0b0d6320d78bf222e50deac36bce788930f7e
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -173,8 +196,12 @@ on the Quartus Prime software download page.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+<<<<<<< HEAD
 ;     Processor 2            ;   0.0%      ;
 ;     Processors 3-12        ;   0.0%      ;
+=======
+;     Processors 2-12        ;   0.0%      ;
+>>>>>>> 0fc0b0d6320d78bf222e50deac36bce788930f7e
 +----------------------------+-------------+
 
 
@@ -191,13 +218,17 @@ on the Quartus Prime software download page.
 ; FSM_MicroInstr.v                 ; yes             ; User Verilog HDL File        ; C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/FSM_MicroInstr.v  ;         ;
 ; ROM_Nx8.v                        ; yes             ; User Verilog HDL File        ; C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/ROM_Nx8.v         ;         ;
 ; ProgramCounter.v                 ; yes             ; User Verilog HDL File        ; C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/ProgramCounter.v  ;         ;
+<<<<<<< HEAD
 ; counter_1s.v                     ; yes             ; User Verilog HDL File        ; C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/counter_1s.v      ;         ;
+=======
+>>>>>>> 0fc0b0d6320d78bf222e50deac36bce788930f7e
 ; accumulator_a.v                  ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/accumulator_a.v   ;         ;
 ; seg7decoder.v                    ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/seg7decoder.v     ;         ;
 ; accumulator_b.v                  ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/accumulator_b.v   ;         ;
 +----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------------+---------+
 
 
+<<<<<<< HEAD
 +------------------------------------------------------------------------+
 ; Analysis & Synthesis Resource Usage Summary                            ;
 +---------------------------------------------+--------------------------+
@@ -228,6 +259,38 @@ on the Quartus Prime software download page.
 ; Total fan-out                               ; 852                      ;
 ; Average fan-out                             ; 1.84                     ;
 +---------------------------------------------+--------------------------+
+=======
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 91          ;
+;                                             ;             ;
+; Total combinational functions               ; 83          ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 46          ;
+;     -- 3 input functions                    ; 23          ;
+;     -- <=2 input functions                  ; 14          ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 78          ;
+;     -- arithmetic mode                      ; 5           ;
+;                                             ;             ;
+; Total registers                             ; 27          ;
+;     -- Dedicated logic registers            ; 27          ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 99          ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; SW[9]~input ;
+; Maximum fan-out                             ; 27          ;
+; Total fan-out                               ; 536         ;
+; Average fan-out                             ; 1.56        ;
++---------------------------------------------+-------------+
+>>>>>>> 0fc0b0d6320d78bf222e50deac36bce788930f7e
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -235,13 +298,18 @@ on the Quartus Prime software download page.
 +---------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name              ; Entity Name     ; Library Name ;
 +---------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------+-----------------+--------------+
+<<<<<<< HEAD
 ; |main                           ; 157 (10)            ; 56 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 107  ; 0            ; 0          ; |main                            ; main            ; work         ;
+=======
+; |main                           ; 83 (10)             ; 27 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 99   ; 0            ; 0          ; |main                            ; main            ; work         ;
+>>>>>>> 0fc0b0d6320d78bf222e50deac36bce788930f7e
 ;    |Accumulator_A:AccA|         ; 2 (2)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Accumulator_A:AccA         ; Accumulator_A   ; work         ;
 ;    |Accumulator_B:AccB|         ; 1 (1)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Accumulator_B:AccB         ; Accumulator_B   ; work         ;
 ;    |Arithmetic_Unit:ALU|        ; 10 (10)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Arithmetic_Unit:ALU        ; Arithmetic_Unit ; work         ;
 ;    |FSM_MicroInstr:Controller|  ; 7 (7)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|FSM_MicroInstr:Controller  ; FSM_MicroInstr  ; work         ;
 ;    |InstructionReg:InstrReg|    ; 5 (5)               ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|InstructionReg:InstrReg    ; InstructionReg  ; work         ;
 ;    |OutRegister:OutReg|         ; 5 (5)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|OutRegister:OutReg         ; OutRegister     ; work         ;
+<<<<<<< HEAD
 ;    |ProgramCounter:ProgCounter| ; 5 (5)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|ProgramCounter:ProgCounter ; ProgramCounter  ; work         ;
 ;    |ROM_Nx8:ROM|                ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|ROM_Nx8:ROM                ; ROM_Nx8         ; work         ;
 ;    |counter_1s:comb_3|          ; 66 (66)             ; 28 (28)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|counter_1s:comb_3          ; counter_1s      ; work         ;
@@ -249,6 +317,13 @@ on the Quartus Prime software download page.
 ;    |seg7Decoder:SEG1|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|seg7Decoder:SEG1           ; seg7Decoder     ; work         ;
 ;    |seg7Decoder:SEG2|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|seg7Decoder:SEG2           ; seg7Decoder     ; work         ;
 ;    |seg7Decoder:SEG3|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|seg7Decoder:SEG3           ; seg7Decoder     ; work         ;
+=======
+;    |ProgramCounter:ProgCounter| ; 4 (4)               ; 3 (3)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|ProgramCounter:ProgCounter ; ProgramCounter  ; work         ;
+;    |ROM_Nx8:ROM|                ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|ROM_Nx8:ROM                ; ROM_Nx8         ; work         ;
+;    |seg7Decoder:SEG0|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|seg7Decoder:SEG0           ; seg7Decoder     ; work         ;
+;    |seg7Decoder:SEG1|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|seg7Decoder:SEG1           ; seg7Decoder     ; work         ;
+;    |seg7Decoder:SEG2|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|seg7Decoder:SEG2           ; seg7Decoder     ; work         ;
+>>>>>>> 0fc0b0d6320d78bf222e50deac36bce788930f7e
 ;    |seg7Decoder:SEG4|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|seg7Decoder:SEG4           ; seg7Decoder     ; work         ;
 ;    |seg7Decoder:SEG5|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|seg7Decoder:SEG5           ; seg7Decoder     ; work         ;
 +---------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------+-----------------+--------------+
@@ -277,7 +352,12 @@ Encoding Type:  One-Hot
 ; InstructionReg:InstrReg|ToInstr[3]    ; Stuck at GND due to stuck port data_in ;
 ; FSM_MicroInstr:Controller|state~2     ; Lost fanout                            ;
 ; FSM_MicroInstr:Controller|state~3     ; Lost fanout                            ;
+<<<<<<< HEAD
 ; Total Number of Removed Registers = 3 ;                                        ;
+=======
+; ProgramCounter:ProgCounter|Counter[3] ; Lost fanout                            ;
+; Total Number of Removed Registers = 4 ;                                        ;
+>>>>>>> 0fc0b0d6320d78bf222e50deac36bce788930f7e
 +---------------------------------------+----------------------------------------+
 
 
@@ -286,12 +366,21 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
+<<<<<<< HEAD
 ; Total registers                              ; 56    ;
 ; Number of registers using Synchronous Clear  ; 6     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 23    ;
+=======
+; Total registers                              ; 27    ;
+; Number of registers using Synchronous Clear  ; 5     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 22    ;
+>>>>>>> 0fc0b0d6320d78bf222e50deac36bce788930f7e
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -301,6 +390,7 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
+<<<<<<< HEAD
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|ProgramCounter:ProgCounter|Counter[0] ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|OutRegister:OutReg|rOut[0]            ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|Accumulator_A:AccA|AluA[2]            ;
@@ -308,6 +398,14 @@ Encoding Type:  One-Hot
 ; 3:1                ; 27 bits   ; 54 LEs        ; 27 LEs               ; 27 LEs                 ; Yes        ; |main|counter_1s:comb_3|count[16]           ;
 ; 10:1               ; 3 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |main|InstructionReg:InstrReg|ToInstr[2]    ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |main|w_IB_BUS[2]                           ;
+=======
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|ProgramCounter:ProgCounter|Counter[1] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|OutRegister:OutReg|rOut[0]            ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|Accumulator_A:AccA|AluA[2]            ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|Accumulator_B:AccB|AluB[1]            ;
+; 10:1               ; 3 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |main|InstructionReg:InstrReg|ToInstr[2]    ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |main|w_IB_BUS[3]                           ;
+>>>>>>> 0fc0b0d6320d78bf222e50deac36bce788930f7e
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
 
 
@@ -401,11 +499,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
+<<<<<<< HEAD
+=======
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ProgramCounter:ProgCounter"                                                               ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Counter[3] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
+>>>>>>> 0fc0b0d6320d78bf222e50deac36bce788930f7e
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
+<<<<<<< HEAD
 ; boundary_port         ; 107                         ;
 ; cycloneiii_ff         ; 56                          ;
 ;     ENA               ; 18                          ;
@@ -426,6 +537,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;                       ;                             ;
 ; Max LUT depth         ; 7.30                        ;
 ; Average LUT depth     ; 3.16                        ;
+=======
+; boundary_port         ; 99                          ;
+; cycloneiii_ff         ; 27                          ;
+;     ENA               ; 18                          ;
+;     ENA SCLR          ; 4                           ;
+;     SCLR              ; 1                           ;
+;     plain             ; 4                           ;
+; cycloneiii_io_obuf    ; 36                          ;
+; cycloneiii_lcell_comb ; 90                          ;
+;     arith             ; 5                           ;
+;         3 data inputs ; 5                           ;
+;     normal            ; 85                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 13                          ;
+;         3 data inputs ; 18                          ;
+;         4 data inputs ; 46                          ;
+;                       ;                             ;
+; Max LUT depth         ; 7.30                        ;
+; Average LUT depth     ; 2.72                        ;
+>>>>>>> 0fc0b0d6320d78bf222e50deac36bce788930f7e
 +-----------------------+-----------------------------+
 
 
@@ -434,7 +566,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
+<<<<<<< HEAD
 ; Top            ; 00:00:02     ;
+=======
+; Top            ; 00:00:00     ;
+>>>>>>> 0fc0b0d6320d78bf222e50deac36bce788930f7e
 +----------------+--------------+
 
 
@@ -444,7 +580,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+<<<<<<< HEAD
     Info: Processing started: Wed Oct 29 23:06:14 2025
+=======
+    Info: Processing started: Tue Oct 28 14:00:57 2025
+>>>>>>> 0fc0b0d6320d78bf222e50deac36bce788930f7e
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off main -c main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -472,6 +612,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file program
     Info (12023): Found entity 1: ProgramCounter File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/ProgramCounter.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file main - copy.v
     Info (12023): Found entity 1: maina File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/main - Copy.v Line: 4
+<<<<<<< HEAD
 Warning (12019): Can't analyze file -- file my_lpm_counter.v is missing
 Info (12021): Found 1 design units, including 1 entities, in source file counter_1s.v
     Info (12023): Found entity 1: counter_1s File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/counter_1s.v Line: 1
@@ -501,6 +642,30 @@ Warning (10030): Net "rom.data_a" at ROM_Nx8.v(13) has no driver or initial valu
 Warning (10030): Net "rom.waddr_a" at ROM_Nx8.v(13) has no driver or initial value, using a default initial value '0' File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/ROM_Nx8.v Line: 13
 Warning (10030): Net "rom.we_a" at ROM_Nx8.v(13) has no driver or initial value, using a default initial value '0' File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/ROM_Nx8.v Line: 13
 Info (12128): Elaborating entity "FSM_MicroInstr" for hierarchy "FSM_MicroInstr:Controller" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/main.v Line: 195
+=======
+Info (12127): Elaborating entity "main" for the top level hierarchy
+Warning (10034): Output port "LEDR[8..4]" at main.v(9) has no driver File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/main.v Line: 9
+Warning (12125): Using design file accumulator_a.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: Accumulator_A File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/accumulator_a.v Line: 4
+Info (12128): Elaborating entity "Accumulator_A" for hierarchy "Accumulator_A:AccA" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/main.v Line: 74
+Warning (12125): Using design file seg7decoder.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: seg7Decoder File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/seg7decoder.v Line: 4
+Info (12128): Elaborating entity "seg7Decoder" for hierarchy "seg7Decoder:SEG1" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/main.v Line: 79
+Warning (12125): Using design file accumulator_b.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: Accumulator_B File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/accumulator_b.v Line: 4
+Info (12128): Elaborating entity "Accumulator_B" for hierarchy "Accumulator_B:AccB" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/main.v Line: 88
+Info (12128): Elaborating entity "Arithmetic_Unit" for hierarchy "Arithmetic_Unit:ALU" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/main.v Line: 103
+Info (12128): Elaborating entity "InRegister" for hierarchy "InRegister:InReg" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/main.v Line: 115
+Info (12128): Elaborating entity "OutRegister" for hierarchy "OutRegister:OutReg" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/main.v Line: 129
+Info (12128): Elaborating entity "InstructionReg" for hierarchy "InstructionReg:InstrReg" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/main.v Line: 146
+Info (12128): Elaborating entity "ProgramCounter" for hierarchy "ProgramCounter:ProgCounter" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/main.v Line: 154
+Warning (10230): Verilog HDL assignment warning at ProgramCounter.v(19): truncated value with size 32 to match size of target (4) File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/ProgramCounter.v Line: 19
+Info (12128): Elaborating entity "ROM_Nx8" for hierarchy "ROM_Nx8:ROM" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/main.v Line: 163
+Warning (10030): Net "rom.data_a" at ROM_Nx8.v(13) has no driver or initial value, using a default initial value '0' File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/ROM_Nx8.v Line: 13
+Warning (10030): Net "rom.waddr_a" at ROM_Nx8.v(13) has no driver or initial value, using a default initial value '0' File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/ROM_Nx8.v Line: 13
+Warning (10030): Net "rom.we_a" at ROM_Nx8.v(13) has no driver or initial value, using a default initial value '0' File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/ROM_Nx8.v Line: 13
+Info (12128): Elaborating entity "FSM_MicroInstr" for hierarchy "FSM_MicroInstr:Controller" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/main.v Line: 183
+>>>>>>> 0fc0b0d6320d78bf222e50deac36bce788930f7e
 Warning (10270): Verilog HDL Case Statement warning at FSM_MicroInstr.v(124): incomplete case statement has no default case item File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/FSM_MicroInstr.v Line: 124
 Warning (10270): Verilog HDL Case Statement warning at FSM_MicroInstr.v(159): incomplete case statement has no default case item File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/FSM_MicroInstr.v Line: 159
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
@@ -551,15 +716,26 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/main.v Line: 9
     Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/main.v Line: 9
     Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/main.v Line: 9
+<<<<<<< HEAD
+=======
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/main.v Line: 9
+>>>>>>> 0fc0b0d6320d78bf222e50deac36bce788930f7e
     Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/main.v Line: 9
     Warning (13410): Pin "HEX0[7]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/main.v Line: 10
     Warning (13410): Pin "HEX1[7]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/main.v Line: 11
     Warning (13410): Pin "HEX2[7]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/main.v Line: 12
+<<<<<<< HEAD
     Warning (13410): Pin "HEX3[7]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/main.v Line: 13
     Warning (13410): Pin "HEX4[7]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/main.v Line: 14
     Warning (13410): Pin "HEX5[7]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/main.v Line: 16
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 2 registers lost all their fanouts during netlist optimizations.
+=======
+    Warning (13410): Pin "HEX4[7]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/main.v Line: 13
+    Warning (13410): Pin "HEX5[7]" is stuck at VCC File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/main.v Line: 15
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 3 registers lost all their fanouts during netlist optimizations.
+>>>>>>> 0fc0b0d6320d78bf222e50deac36bce788930f7e
 Warning (20013): Ignored 24 assignments for entity "DE10_LITE_Golden_Top" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE10_LITE_Golden_Top -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity DE10_LITE_Golden_Top -section_id Top was ignored
@@ -587,13 +763,19 @@ Warning (20013): Ignored 24 assignments for entity "DE10_LITE_Golden_Top" -- ent
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity DE10_LITE_Golden_Top -section_id Top was ignored
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+<<<<<<< HEAD
 Warning (21074): Design contains 6 input pin(s) that do not drive logic
+=======
+Warning (21074): Design contains 7 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "MAX10_CLK1_50" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/main.v Line: 5
+>>>>>>> 0fc0b0d6320d78bf222e50deac36bce788930f7e
     Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/main.v Line: 6
     Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/main.v Line: 6
     Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/main.v Line: 7
     Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/main.v Line: 7
     Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/main.v Line: 7
     Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/Jackson.Hall/Desktop/ENCE_3100_Jackson_Hall/QuartusLite/DE10_Board/Projects/Lab_8_VSM_Template/main.v Line: 7
+<<<<<<< HEAD
 Info (21057): Implemented 277 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 58 output pins
@@ -604,5 +786,17 @@ Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 106 warnings
     Info: Processing ended: Wed Oct 29 23:06:28 2025
     Info: Elapsed time: 00:00:14
     Info: Total CPU time (on all processors): 00:00:31
+=======
+Info (21057): Implemented 195 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 13 input pins
+    Info (21059): Implemented 50 output pins
+    Info (21060): Implemented 36 bidirectional pins
+    Info (21061): Implemented 96 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 103 warnings
+    Info: Peak virtual memory: 4842 megabytes
+    Info: Processing ended: Tue Oct 28 14:01:05 2025
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:23
+>>>>>>> 0fc0b0d6320d78bf222e50deac36bce788930f7e
 
 
