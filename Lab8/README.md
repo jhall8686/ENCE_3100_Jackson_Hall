@@ -715,4 +715,4 @@ endmodule
 
 All this code is realistically doing is implementing the diagram at the top of this page. When it is synthesized and uploaded to the DE10, this is the result: 
 
-<img src = "board-rec_uP.gif" />
+<img width = "500" src = "board_rec_uP.gif" />
