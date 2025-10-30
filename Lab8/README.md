@@ -716,3 +716,5 @@ endmodule
 All this code is realistically doing is implementing the diagram at the top of this page. When it is synthesized and uploaded to the DE10, this is the result: 
 
 <img width = "500" src = "board_rec_uP.gif" />
+  
+Left to right: OutRegister, InRegister, Accumulator A, ALU, Accumulator B
