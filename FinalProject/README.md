@@ -185,7 +185,7 @@ The next state logic is the largest and most important block of code here, essen
 					next_state = WORD;
 			end
 			VER: begin
-				if(char1 == char2 && char2 == char3 && char3 == char4 && char5 == 8'd13) begin //**NOTE**: currently, enter (8'd13) gets put in the P5 slot before the verdict is checked, so that's a part of the correct verdict
+				if(char1 == char2 && char2 == char3 && char3 == char4 && char4 == char5) begin 
 					next_state = END; //correct verdict
 				end else begin
 					next_state = P1; //incorrect verdict
